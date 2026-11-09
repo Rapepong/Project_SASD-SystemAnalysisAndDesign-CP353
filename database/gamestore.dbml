@@ -1,0 +1,98 @@
+// ER Diagram ของ Online Game Store (ภาษา DBML)
+// วางโค้ดนี้ที่ https://dbdiagram.io/d เพื่อ generate ภาพ ER Diagram
+
+Project GameStore {
+  database_type: 'PostgreSQL'
+  Note: 'Online Game Store - CP353 System Analysis and Design'
+}
+
+Table users {
+  id integer [pk, increment]
+  username varchar(50) [not null, unique]
+  password_hash varchar(200) [not null]
+  display_name varchar(100) [not null]
+  email varchar(100) [not null]
+  created_at timestamp [not null, default: `LOCALTIMESTAMP`]
+}
+
+Table genres {
+  id integer [pk]
+  name varchar(50) [not null, unique]
+}
+
+Table games {
+  id integer [pk, increment]
+  title varchar(150) [not null]
+  developer varchar(100) [not null]
+  description varchar(2000) [not null, default: '']
+  price money [not null]
+  release_date date [not null]
+  is_active boolean [not null, default: true]
+}
+
+Table game_genres {
+  game_id integer [not null, ref: > games.id]
+  genre_id integer [not null, ref: > genres.id]
+  indexes {
+    (game_id, genre_id) [pk]
+  }
+  Note: 'table กลางของ many-to-many (games <-> genres)'
+}
+
+Table cart_items {
+  id integer [pk, increment]
+  user_id integer [not null, ref: > users.id]
+  game_id integer [not null, ref: > games.id]
+  added_at timestamp [not null, default: `LOCALTIMESTAMP`]
+  indexes {
+    (user_id, game_id) [unique]
+  }
+}
+
+Table orders {
+  id integer [pk, increment]
+  user_id integer [not null, ref: > users.id]
+  ordered_at timestamp [not null]
+  total_amount money [not null]
+  bank_account_no varchar(20) [not null]
+  payment_ref varchar(40) [not null]
+}
+
+Table order_items {
+  id integer [pk, increment]
+  order_id integer [not null, ref: > orders.id]
+  game_id integer [not null, ref: > games.id]
+  price money [not null, note: 'ราคา ณ วันที่ซื้อ']
+  is_refunded boolean [not null, default: false]
+}
+
+Table library_items {
+  id integer [pk, increment]
+  user_id integer [not null, ref: > users.id]
+  game_id integer [not null, ref: > games.id]
+  order_item_id integer [not null, unique, ref: - order_items.id]
+  acquired_at timestamp [not null]
+  playtime_minutes integer [not null, default: 0]
+  last_played_at timestamp
+  indexes {
+    (user_id, game_id) [unique]
+  }
+  Note: 'Game List ของลูกค้า'
+}
+
+Table refunds {
+  id integer [pk, increment]
+  order_item_id integer [not null, unique, ref: - order_items.id]
+  amount money [not null]
+  reason varchar(500) [not null, default: '']
+  refunded_at timestamp [not null]
+  payment_ref varchar(40) [not null]
+}
+
+Table bank_accounts {
+  id integer [pk, increment]
+  account_no varchar(20) [not null, unique]
+  owner_name varchar(100) [not null]
+  balance money [not null]
+  Note: 'ธนาคารจำลอง (Simulated Bank) - ไม่ได้เชื่อมต่อธนาคารจริง'
+}

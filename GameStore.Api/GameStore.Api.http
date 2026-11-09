@@ -1,0 +1,113 @@
+# ใช้ทดสอบ REST API ใน Visual Studio (Endpoints Explorer / กด "Send request" เหนือแต่ละ request)
+# ต้อง Run GameStore.Api ก่อน
+# ถ้าอยาก reset ข้อมูลกลับค่าเริ่มต้น ให้รัน database/2_create_tables.sql ใหม่
+
+@Api = http://localhost:5080/api/v1
+@UserId = 1
+
+### ---------- Users ----------
+
+### สมัครสมาชิก -> 201 Created
+POST {{Api}}/users
+Content-Type: application/json
+
+{
+  "username": "newplayer",
+  "password": "pass1234",
+  "displayName": "New Player",
+  "email": "new@example.com"
+}
+
+### เข้าสู่ระบบ -> 200 OK  (รหัสผิด -> 401)
+POST {{Api}}/users:login
+Content-Type: application/json
+
+{
+  "username": "player1",
+  "password": "pass1234"
+}
+
+### ---------- Catalog ----------
+
+### แนวเกมทั้งหมด
+GET {{Api}}/genres
+
+### เกมทั้งหมดที่วางขาย
+GET {{Api}}/games
+
+### ค้นหาตามชื่อ
+GET {{Api}}/games?search=star
+
+### กรองตาม genre (9 = Horror)
+GET {{Api}}/games?genreId=9
+
+### รายละเอียดเกม
+GET {{Api}}/games/15
+
+### ---------- Cart ----------
+
+### ดูตะกร้า
+GET {{Api}}/users/{{UserId}}/cart
+
+### เพิ่มเกมลงตะกร้า -> 201 (มีแล้ว -> 409)
+POST {{Api}}/users/{{UserId}}/cart/items
+Content-Type: application/json
+
+{
+  "gameId": 3
+}
+
+### นำเกมออกจากตะกร้า -> 204
+DELETE {{Api}}/users/{{UserId}}/cart/items/3
+
+### ---------- Orders ----------
+
+### ชำระเงินทุกเกมในตะกร้า -> 201 (เงินไม่พอ -> 402)
+POST {{Api}}/users/{{UserId}}/orders
+Content-Type: application/json
+
+{
+  "bankAccountNo": "111-1-11111-1"
+}
+
+### player2 ซื้อด้วยบัญชีเงินไม่พอ -> 402 Payment Required
+POST {{Api}}/users/2/orders
+Content-Type: application/json
+
+{
+  "bankAccountNo": "222-2-22222-2"
+}
+
+### ประวัติการซื้อ
+GET {{Api}}/users/{{UserId}}/orders
+
+### ---------- Library (Game List) ----------
+
+### Game List
+GET {{Api}}/users/{{UserId}}/library
+
+### เล่นเกม (จำลอง +30 นาที)
+POST {{Api}}/users/{{UserId}}/library/4:play
+
+### ---------- Refunds ----------
+
+### ขอคืนเงิน order item 4 (Farmstead Days) -> 201
+POST {{Api}}/users/{{UserId}}/refunds
+Content-Type: application/json
+
+{
+  "orderItemId": 4,
+  "reason": "เล่นแล้วไม่ชอบ"
+}
+
+### ขอคืนเงิน order item 1 (ซื้อมาเกิน 14 วัน) -> 409
+POST {{Api}}/users/{{UserId}}/refunds
+Content-Type: application/json
+
+{
+  "orderItemId": 1,
+  "reason": "test"
+}
+
+### ประวัติการคืนเงิน
+GET {{Api}}/users/{{UserId}}/refunds

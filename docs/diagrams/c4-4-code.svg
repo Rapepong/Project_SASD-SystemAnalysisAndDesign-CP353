@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" font-family="Leelawadee UI, Segoe UI, Tahoma, sans-serif">
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#707070"/></marker>
+  <marker id="open" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10" fill="none" stroke="#707070" stroke-width="1.5"/></marker>
+  <marker id="hollow" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="13" markerHeight="13" orient="auto-start-reverse">
+    <path d="M0,0 L12,6 L0,12 z" fill="#ffffff" stroke="#707070" stroke-width="1.2"/></marker>
+</defs>
+<rect width="1400" height="900" fill="#ffffff"/>
+<text x="30" y="40" font-size="20" font-weight="bold" fill="#111111" text-anchor="start" font-style="normal">[Code] Component: การชำระเงินและคืนเงิน (UML Class Diagram)</text>
+<text x="30" y="62" font-size="13" font-weight="normal" fill="#666666" text-anchor="start" font-style="normal">ขยายความ PurchaseService, RefundService และ Bank Gateway</text>
+<rect x="30" y="80" width="430" height="164" fill="#ffffff" stroke="#2b6cb0" stroke-width="1.5"/>
+<rect x="30" y="80" width="430" height="30" fill="#85bbf0" stroke="#2b6cb0" stroke-width="1.5"/>
+<text x="245.0" y="101" font-size="15" font-weight="bold" fill="#0b2540" text-anchor="middle" font-style="normal">PurchaseService</text>
+<text x="40" y="129" font-size="12.5" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">- db : GameStoreContext</text>
+<text x="40" y="148" font-size="12.5" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">- bank : IBankGateway</text>
+<line x1="30" y1="158" x2="460" y2="158" stroke="#2b6cb0" stroke-width="1.2"/>
+<text x="40" y="177" font-size="12.5" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">+ CheckoutAsync(userId, CheckoutRequest)</text>
+<text x="40" y="196" font-size="12.5" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">      : Task&lt;PurchaseReceiptDto&gt;</text>
+<text x="40" y="215" font-size="12.5" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">+ GetOrdersAsync(userId) : Task&lt;List&lt;OrderDto&gt;&gt;</text>
+<text x="40" y="234" font-size="12.5" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">+ GetOrderAsync(userId, orderId) : Task&lt;OrderDto&gt;</text>
+<rect x="500" y="80" width="430" height="164" fill="#ffffff" stroke="#2b6cb0" stroke-width="1.5"/>
+<rect x="500" y="80" width="430" height="30" fill="#85bbf0" stroke="#2b6cb0" stroke-width="1.5"/>
+<text x="715.0" y="101" font-size="15" font-weight="bold" fill="#0b2540" text-anchor="middle" font-style="normal">RefundService</text>
+<text x="510" y="129" font-size="12.5" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">- db : GameStoreContext</text>
+<text x="510" y="148" font-size="12.5" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">- bank : IBankGateway</text>
+<line x1="500" y1="158" x2="930" y2="158" stroke="#2b6cb0" stroke-width="1.2"/>
+<text x="510" y="177" font-size="12.5" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">+ RequestRefundAsync(userId, RefundRequest)</text>
+<text x="510" y="196" font-size="12.5" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">      : Task&lt;RefundReceiptDto&gt;</text>
+<text x="510" y="215" font-size="12.5" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">+ GetRefundsAsync(userId) : Task&lt;List&lt;RefundDto&gt;&gt;</text>
+<text x="510" y="234" font-size="12.5" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">+ GetRefundAsync(userId, refundId) : Task&lt;RefundDto&gt;</text>
+<rect x="970" y="80" width="400" height="142" fill="#ffffff" stroke="#2b6cb0" stroke-width="1.5"/>
+<rect x="970" y="80" width="400" height="46" fill="#85bbf0" stroke="#2b6cb0" stroke-width="1.5"/>
+<text x="1170.0" y="98" font-size="12" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">«static»</text>
+<text x="1170.0" y="117" font-size="15" font-weight="bold" fill="#0b2540" text-anchor="middle" font-style="normal">RefundPolicy</text>
+<text x="980" y="145" font-size="12.5" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">+ MaxDaysAfterPurchase : int = 14</text>
+<text x="980" y="164" font-size="12.5" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">+ MaxPlaytimeMinutes : int = 120</text>
+<line x1="970" y1="174" x2="1370" y2="174" stroke="#2b6cb0" stroke-width="1.2"/>
+<text x="980" y="193" font-size="12.5" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">+ Check(orderedAt, playtimeMinutes,</text>
+<text x="980" y="212" font-size="12.5" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">      isRefunded, now) : RefundEligibility</text>
+<rect x="1020" y="400" width="300" height="123" fill="#ffffff" stroke="#2b6cb0" stroke-width="1.5"/>
+<rect x="1020" y="400" width="300" height="46" fill="#85bbf0" stroke="#2b6cb0" stroke-width="1.5"/>
+<text x="1170.0" y="418" font-size="12" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">«record»</text>
+<text x="1170.0" y="437" font-size="15" font-weight="bold" fill="#0b2540" text-anchor="middle" font-style="normal">RefundEligibility</text>
+<text x="1030" y="465" font-size="12.5" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">+ IsEligible : bool</text>
+<text x="1030" y="484" font-size="12.5" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">+ Note : string</text>
+<line x1="1020" y1="494" x2="1320" y2="494" stroke="#2b6cb0" stroke-width="1.2"/>
+<rect x="30" y="430" width="430" height="161" fill="#ffffff" stroke="#2b6cb0" stroke-width="1.5"/>
+<rect x="30" y="430" width="430" height="46" fill="#d6e8fa" stroke="#2b6cb0" stroke-width="1.5"/>
+<text x="245.0" y="448" font-size="12" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">«interface»</text>
+<text x="245.0" y="467" font-size="15" font-weight="bold" fill="#0b2540" text-anchor="middle" font-style="normal">IBankGateway</text>
+<line x1="30" y1="505" x2="460" y2="505" stroke="#2b6cb0" stroke-width="1.2"/>
+<text x="40" y="524" font-size="12.5" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">+ ChargeAsync(accountNo, amount, description)</text>
+<text x="40" y="543" font-size="12.5" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">      : Task&lt;BankTransactionResult&gt;</text>
+<text x="40" y="562" font-size="12.5" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">+ RefundAsync(accountNo, amount, description)</text>
+<text x="40" y="581" font-size="12.5" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">      : Task&lt;BankTransactionResult&gt;</text>
+<rect x="30" y="700" width="430" height="107" fill="#ffffff" stroke="#2b6cb0" stroke-width="1.5"/>
+<rect x="30" y="700" width="430" height="30" fill="#85bbf0" stroke="#2b6cb0" stroke-width="1.5"/>
+<text x="245.0" y="721" font-size="15" font-weight="bold" fill="#0b2540" text-anchor="middle" font-style="normal">SimulatedBankGateway</text>
+<text x="40" y="749" font-size="12.5" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">- db : GameStoreContext  (UPDATE bank_accounts)</text>
+<line x1="30" y1="759" x2="460" y2="759" stroke="#2b6cb0" stroke-width="1.2"/>
+<text x="40" y="778" font-size="12.5" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">+ ChargeAsync(...) : Task&lt;BankTransactionResult&gt;</text>
+<text x="40" y="797" font-size="12.5" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">+ RefundAsync(...) : Task&lt;BankTransactionResult&gt;</text>
+<rect x="560" y="430" width="360" height="202" fill="#ffffff" stroke="#2b6cb0" stroke-width="1.5"/>
+<rect x="560" y="430" width="360" height="30" fill="#85bbf0" stroke="#2b6cb0" stroke-width="1.5"/>
+<text x="740.0" y="451" font-size="15" font-weight="bold" fill="#0b2540" text-anchor="middle" font-style="normal">GameStoreContext</text>
+<text x="570" y="479" font-size="12.5" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">+ Orders : DbSet&lt;Order&gt;</text>
+<text x="570" y="498" font-size="12.5" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">+ OrderItems : DbSet&lt;OrderItem&gt;</text>
+<text x="570" y="517" font-size="12.5" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">+ LibraryItems : DbSet&lt;LibraryItem&gt;</text>
+<text x="570" y="536" font-size="12.5" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">+ Refunds : DbSet&lt;Refund&gt;</text>
+<text x="570" y="555" font-size="12.5" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">+ CartItems : DbSet&lt;CartItem&gt;</text>
+<text x="570" y="574" font-size="12.5" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">+ BankAccounts : DbSet&lt;BankAccount&gt;</text>
+<line x1="560" y1="584" x2="920" y2="584" stroke="#2b6cb0" stroke-width="1.2"/>
+<text x="570" y="603" font-size="12.5" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">+ SaveChangesAsync() : Task&lt;int&gt;</text>
+<text x="570" y="622" font-size="12.5" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">+ Database.BeginTransactionAsync()</text>
+<rect x="560" y="740" width="360" height="161" fill="#ffffff" stroke="#2b6cb0" stroke-width="1.5"/>
+<rect x="560" y="740" width="360" height="46" fill="#85bbf0" stroke="#2b6cb0" stroke-width="1.5"/>
+<text x="740.0" y="758" font-size="12" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">«record»</text>
+<text x="740.0" y="777" font-size="15" font-weight="bold" fill="#0b2540" text-anchor="middle" font-style="normal">BankTransactionResult</text>
+<text x="570" y="805" font-size="12.5" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">+ Success : bool</text>
+<text x="570" y="824" font-size="12.5" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">+ Reference : string?</text>
+<text x="570" y="843" font-size="12.5" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">+ BalanceAfter : decimal?</text>
+<text x="570" y="862" font-size="12.5" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">+ FailureReason : string?</text>
+<line x1="560" y1="872" x2="920" y2="872" stroke="#2b6cb0" stroke-width="1.2"/>
+<polyline points="245,244 245,426" fill="none" stroke="#707070" stroke-width="1.6" marker-end="url(#open)"/>
+<text x="255" y="400" font-size="12.5" font-weight="normal" fill="#444444" text-anchor="start" font-style="normal">ขอตัดเงินผ่าน</text>
+<polyline points="600,244 380,426" fill="none" stroke="#707070" stroke-width="1.6" marker-end="url(#open)"/>
+<text x="500" y="360" font-size="12.5" font-weight="normal" fill="#444444" text-anchor="start" font-style="normal">ขอคืนเงินผ่าน</text>
+<polyline points="930,150 966,150" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#open)"/>
+<text x="948" y="140" font-size="12.5" font-weight="normal" fill="#444444" text-anchor="middle" font-style="normal">ตรวจ</text>
+<polyline points="1170,222 1170,396" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#open)"/>
+<text x="1180" y="360" font-size="12.5" font-weight="normal" fill="#444444" text-anchor="start" font-style="normal">«returns»</text>
+<polyline points="245,700 245,595" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#hollow)"/>
+<text x="255" y="690" font-size="12.5" font-weight="normal" fill="#444444" text-anchor="start" font-style="normal">implements</text>
+<polyline points="460,520 510,520 510,800 556,800" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#open)"/>
+<text x="518" y="700" font-size="12.5" font-weight="normal" fill="#444444" text-anchor="start" font-style="normal">«returns»</text>
+<rect x="980" y="560" width="390" height="214" fill="#fffbe6" stroke="#d8c46a"/>
+<text x="994" y="584" font-size="14" font-weight="bold" fill="#5b4a00" text-anchor="start" font-style="normal">หมายเหตุ</text>
+<text x="994" y="607" font-size="13" font-weight="normal" fill="#5b4a00" text-anchor="start" font-style="normal">• ทุกคลาสใช้ GameStoreContext ผ่าน attribute db</text>
+<text x="994" y="630" font-size="13" font-weight="normal" fill="#5b4a00" text-anchor="start" font-style="normal">• Service ขึ้นกับ interface IBankGateway</text>
+<text x="994" y="653" font-size="13" font-weight="normal" fill="#5b4a00" text-anchor="start" font-style="normal">   ไม่ขึ้นกับธนาคารจำลองโดยตรง</text>
+<text x="994" y="676" font-size="13" font-weight="normal" fill="#5b4a00" text-anchor="start" font-style="normal">   -&gt; เปลี่ยนเป็นธนาคารจริงได้โดยไม่แก้ Domain</text>
+<text x="994" y="699" font-size="13" font-weight="normal" fill="#5b4a00" text-anchor="start" font-style="normal">• ตัดเงิน + สร้าง order + เพิ่ม Game List</text>
+<text x="994" y="722" font-size="13" font-weight="normal" fill="#5b4a00" text-anchor="start" font-style="normal">   อยู่ใน DB transaction เดียวกัน</text>
+<text x="994" y="745" font-size="13" font-weight="normal" fill="#5b4a00" text-anchor="start" font-style="normal">   -&gt; ตัดเงินแล้วไม่ได้เกม เป็นไปไม่ได้</text>
+<line x1="1050" y1="830" x2="1110" y2="830" stroke="#707070" stroke-width="1.6" marker-end="url(#open)"/>
+<text x="1120" y="834" font-size="12" font-weight="normal" fill="#444" text-anchor="start" font-style="normal">association / uses</text>
+<line x1="1050" y1="858" x2="1110" y2="858" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#hollow)"/>
+<text x="1120" y="862" font-size="12" font-weight="normal" fill="#444" text-anchor="start" font-style="normal">realization (implements)</text>
+<line x1="1050" y1="884" x2="1110" y2="884" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#open)"/>
+<text x="1120" y="888" font-size="12" font-weight="normal" fill="#444" text-anchor="start" font-style="normal">dependency</text>
+</svg>

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="560" viewBox="0 0 1180 560" font-family="Leelawadee UI, Segoe UI, Tahoma, sans-serif">
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#707070"/></marker>
+  <marker id="open" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10" fill="none" stroke="#707070" stroke-width="1.5"/></marker>
+  <marker id="hollow" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="13" markerHeight="13" orient="auto-start-reverse">
+    <path d="M0,0 L12,6 L0,12 z" fill="#ffffff" stroke="#707070" stroke-width="1.2"/></marker>
+</defs>
+<rect width="1180" height="560" fill="#ffffff"/>
+<text x="30" y="40" font-size="20" font-weight="bold" fill="#111111" text-anchor="start" font-style="normal">[System Context] Online Game Store (OGS)</text>
+<text x="30" y="62" font-size="13" font-weight="normal" fill="#666666" text-anchor="start" font-style="normal">ภาพรวม: ใครใช้ระบบ และระบบติดต่อกับระบบภายนอกใดบ้าง</text>
+<circle cx="170" cy="182" r="32" fill="#08427b" stroke="#06315c" stroke-width="1.5"/>
+<rect x="45.0" y="206" width="250" height="150" rx="28" fill="#08427b" stroke="#06315c" stroke-width="1.5"/>
+<text x="170.0" y="250.0" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle" font-style="normal">Customer (ลูกค้า)</text>
+<text x="170.0" y="266.0" font-size="12" font-weight="normal" fill="#ffffff" text-anchor="middle" font-style="normal">[Person]</text>
+<text x="170.0" y="294.0" font-size="12.5" font-weight="normal" fill="#ffffff" text-anchor="middle" font-style="normal">ผู้เลือกซื้อเกม เล่นเกม</text>
+<text x="170.0" y="311.0" font-size="12.5" font-weight="normal" fill="#ffffff" text-anchor="middle" font-style="normal">จาก Game List และ</text>
+<text x="170.0" y="328.0" font-size="12.5" font-weight="normal" fill="#ffffff" text-anchor="middle" font-style="normal">ขอคืนเงินได้</text>
+<rect x="450" y="190" width="290" height="170" rx="10" fill="#1168bd" stroke="#0c4e8d" stroke-width="1.5"/>
+<text x="595.0" y="244.0" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle" font-style="normal">Online Game Store (OGS)</text>
+<text x="595.0" y="260.0" font-size="12" font-weight="normal" fill="#ffffff" text-anchor="middle" font-style="normal">[Software System]</text>
+<text x="595.0" y="288.0" font-size="12.5" font-weight="normal" fill="#ffffff" text-anchor="middle" font-style="normal">ร้านขายเกมออนไลน์: ค้นหาเกม</text>
+<text x="595.0" y="305.0" font-size="12.5" font-weight="normal" fill="#ffffff" text-anchor="middle" font-style="normal">ตะกร้า ชำระเงิน Game List</text>
+<text x="595.0" y="322.0" font-size="12.5" font-weight="normal" fill="#ffffff" text-anchor="middle" font-style="normal">และคืนเงิน</text>
+<rect x="860" y="190" width="280" height="170" rx="10" fill="#999999" stroke="#555" stroke-dasharray="6 4" stroke-width="1.5"/>
+<text x="1000.0" y="244.0" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle" font-style="normal">Bank System (ธนาคาร)</text>
+<text x="1000.0" y="260.0" font-size="12" font-weight="normal" fill="#ffffff" text-anchor="middle" font-style="normal">[Software System - External]</text>
+<text x="1000.0" y="288.0" font-size="12.5" font-weight="normal" fill="#ffffff" text-anchor="middle" font-style="normal">ตัดเงินและคืนเงิน</text>
+<text x="1000.0" y="305.0" font-size="12.5" font-weight="normal" fill="#ffffff" text-anchor="middle" font-style="normal">*จำลอง ไม่ได้เชื่อมต่อ</text>
+<text x="1000.0" y="322.0" font-size="12.5" font-weight="normal" fill="#ffffff" text-anchor="middle" font-style="normal">ธนาคารจริง</text>
+<polyline points="295,275 446,275" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="370" y="238" font-size="12.5" font-weight="normal" fill="#444444" text-anchor="middle" font-style="normal">ค้นหา ซื้อ เล่น และ</text>
+<text x="370" y="254" font-size="12.5" font-weight="normal" fill="#444" text-anchor="middle" font-style="normal">ขอคืนเงินเกม โดยใช้</text>
+<polyline points="740,275 856,275" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="798" y="238" font-size="12.5" font-weight="normal" fill="#444444" text-anchor="middle" font-style="normal">ส่งคำขอตัดเงิน /</text>
+<text x="798" y="254" font-size="12.5" font-weight="normal" fill="#444" text-anchor="middle" font-style="normal">คืนเงินไปยัง</text>
+<rect x="30" y="440" width="620" height="78" rx="6" fill="#fafafa" stroke="#cccccc"/>
+<text x="42" y="458" font-size="12" font-weight="bold" fill="#555555" text-anchor="start" font-style="normal">Legend (ความหมายของสัญลักษณ์)</text>
+<rect x="50" y="468" width="120" height="28" rx="13" fill="#08427b"/>
+<text x="110" y="512" font-size="11.5" font-weight="normal" fill="#444444" text-anchor="middle" font-style="normal">Person</text>
+<rect x="200" y="468" width="120" height="28" rx="4" fill="#1168bd"/>
+<text x="260" y="512" font-size="11.5" font-weight="normal" fill="#444444" text-anchor="middle" font-style="normal">Software System</text>
+<rect x="350" y="468" width="120" height="28" rx="4" fill="#999999"/>
+<text x="410" y="512" font-size="11.5" font-weight="normal" fill="#444444" text-anchor="middle" font-style="normal">External System</text>
+<line x1="500" y1="482" x2="620" y2="482" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="560" y="512" font-size="11.5" font-weight="normal" fill="#444444" text-anchor="middle" font-style="normal">Relationship</text>
+</svg>

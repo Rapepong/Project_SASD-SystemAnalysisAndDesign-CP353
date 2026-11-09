@@ -1,0 +1,44 @@
+' Use Case Diagram ของ Online Game Store (OGS)
+' เปิด/แก้ไขได้ที่ https://www.plantuml.com/plantuml หรือ extension PlantUML ใน VS Code
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+skinparam usecase {
+  BackgroundColor #FFFFFF
+  BorderColor #1168BD
+}
+
+actor "Customer\n(ลูกค้า)" as Customer
+actor "Bank\n(ธนาคาร)\n<<simulated>>" as Bank
+
+rectangle "Online Game Store (OGS)" {
+  usecase "ซื้อเกมออนไลน์\n(Buy Games Online)\n<<kite level>>" as UC0
+  usecase "สมัครสมาชิก\n(Register)" as UC1
+  usecase "เข้าสู่ระบบ\n(Login)" as UC2
+  usecase "ค้นหาเกม\n(Search Games)" as UC3
+  usecase "ดูรายละเอียดเกม\n(View Game Detail)" as UC4
+  usecase "เพิ่มเกมลงตะกร้า\n(Add to Cart)" as UC5
+  usecase "นำเกมออกจากตะกร้า\n(Remove from Cart)" as UC6
+  usecase "ชำระเงิน\n(Checkout)" as UC7
+  usecase "ดู Game List\n(View Game List)" as UC8
+  usecase "เล่นเกม\n(Play Game)" as UC9
+  usecase "ขอคืนเงิน\n(Request Refund)" as UC10
+  usecase "ดูประวัติการซื้อ\n(View Purchase History)" as UC11
+}
+
+Customer --> UC0
+Customer --> UC1
+Customer --> UC2
+Customer --> UC3
+Customer --> UC4
+Customer --> UC5
+Customer --> UC6
+Customer --> UC7
+Customer --> UC8
+Customer --> UC9
+Customer --> UC10
+Customer --> UC11
+
+UC7 --> Bank
+UC10 --> Bank
+@enduml

@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1340" height="1060" viewBox="0 0 1340 1060" font-family="Leelawadee UI, Segoe UI, Tahoma, sans-serif">
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#707070"/></marker>
+  <marker id="open" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10" fill="none" stroke="#707070" stroke-width="1.5"/></marker>
+  <marker id="hollow" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="13" markerHeight="13" orient="auto-start-reverse">
+    <path d="M0,0 L12,6 L0,12 z" fill="#ffffff" stroke="#707070" stroke-width="1.2"/></marker>
+</defs>
+<rect width="1340" height="1060" fill="#ffffff"/>
+<text x="30" y="40" font-size="20" font-weight="bold" fill="#111111" text-anchor="start" font-style="normal">[Component] Game Store API</text>
+<text x="30" y="62" font-size="13" font-weight="normal" fill="#666666" text-anchor="start" font-style="normal">ส่วนประกอบภายใน container Game Store API แบ่งตาม 3 Layer</text>
+<rect x="540" y="70" width="260" height="100" rx="6" fill="#438dd5" stroke="#32699f" stroke-width="1.5"/>
+<rect x="540" y="70" width="260" height="20" rx="6" fill="#32699f"/>
+<rect x="540" y="82" width="260" height="8" fill="#32699f"/>
+<circle cx="554" cy="80" r="4" fill="#ffffff" opacity="0.8"/>
+<circle cx="568" cy="80" r="4" fill="#ffffff" opacity="0.8"/>
+<circle cx="582" cy="80" r="4" fill="#ffffff" opacity="0.8"/>
+<text x="670.0" y="124.5" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle" font-style="normal">Game Store Client</text>
+<text x="670.0" y="140.5" font-size="12" font-weight="normal" fill="#ffffff" text-anchor="middle" font-style="normal">[Container: WinForms]</text>
+<rect x="30" y="200" width="1280" height="690" rx="6" fill="none" stroke="#8a8a8a" stroke-width="1.5" stroke-dasharray="10 6"/>
+<text x="44" y="860" font-size="15" font-weight="bold" fill="#555555" text-anchor="start" font-style="normal">Game Store API</text>
+<text x="44" y="878" font-size="12" font-weight="normal" fill="#777777" text-anchor="start" font-style="normal">[Container: ASP.NET Core 10]</text>
+<rect x="40" y="226" width="1260" height="140" rx="6" fill="#eef5fc" stroke="#c5dbf1"/>
+<text x="1290" y="244" font-size="12.5" font-weight="bold" fill="#2b5c8a" text-anchor="end" font-style="normal">REST API (Controllers) - รับ HTTP request / ตอบ status code</text>
+<rect x="40" y="410" width="1260" height="290" rx="6" fill="#f3f9ee" stroke="#cfe3c0"/>
+<text x="152" y="428" font-size="12.5" font-weight="bold" fill="#3d6b22" text-anchor="start" font-style="normal">Domain Layer</text>
+<rect x="40" y="724" width="1260" height="140" rx="6" fill="#fdf3ea" stroke="#efd3b8"/>
+<text x="52" y="742" font-size="12.5" font-weight="bold" fill="#8a4b12" text-anchor="start" font-style="normal">Data Access Layer (GameStore.DataAccess)</text>
+<rect x="50" y="252" width="190" height="104" rx="10" fill="#85bbf0" stroke="#638cb4" stroke-width="1.5"/>
+<text x="145.0" y="281.5" font-size="16" font-weight="bold" fill="#0b2540" text-anchor="middle" font-style="normal">UsersController</text>
+<text x="145.0" y="297.5" font-size="12" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">[Component: Controller]</text>
+<text x="145.0" y="325.5" font-size="12.5" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">/users</text>
+<text x="145.0" y="342.5" font-size="12.5" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">/users:login</text>
+<rect x="260" y="252" width="190" height="104" rx="10" fill="#85bbf0" stroke="#638cb4" stroke-width="1.5"/>
+<text x="355.0" y="281.5" font-size="16" font-weight="bold" fill="#0b2540" text-anchor="middle" font-style="normal">CatalogController</text>
+<text x="355.0" y="297.5" font-size="12" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">[Component: Controller]</text>
+<text x="355.0" y="325.5" font-size="12.5" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">/games?search=</text>
+<text x="355.0" y="342.5" font-size="12.5" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">&amp;genreId=, /genres</text>
+<rect x="470" y="252" width="190" height="104" rx="10" fill="#85bbf0" stroke="#638cb4" stroke-width="1.5"/>
+<text x="565.0" y="281.5" font-size="16" font-weight="bold" fill="#0b2540" text-anchor="middle" font-style="normal">CartController</text>
+<text x="565.0" y="297.5" font-size="12" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">[Component: Controller]</text>
+<text x="565.0" y="325.5" font-size="12.5" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">/users/{id}/cart</text>
+<text x="565.0" y="342.5" font-size="12.5" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">/items</text>
+<rect x="680" y="252" width="190" height="104" rx="10" fill="#85bbf0" stroke="#638cb4" stroke-width="1.5"/>
+<text x="775.0" y="290.0" font-size="16" font-weight="bold" fill="#0b2540" text-anchor="middle" font-style="normal">OrdersController</text>
+<text x="775.0" y="306.0" font-size="12" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">[Component: Controller]</text>
+<text x="775.0" y="334.0" font-size="12.5" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">/users/{id}/orders</text>
+<rect x="890" y="252" width="190" height="104" rx="10" fill="#85bbf0" stroke="#638cb4" stroke-width="1.5"/>
+<text x="985.0" y="281.5" font-size="16" font-weight="bold" fill="#0b2540" text-anchor="middle" font-style="normal">LibraryController</text>
+<text x="985.0" y="297.5" font-size="12" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">[Component: Controller]</text>
+<text x="985.0" y="325.5" font-size="12.5" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">/users/{id}/library</text>
+<text x="985.0" y="342.5" font-size="12.5" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">/{gameId}:play</text>
+<rect x="1100" y="252" width="190" height="104" rx="10" fill="#85bbf0" stroke="#638cb4" stroke-width="1.5"/>
+<text x="1195.0" y="290.0" font-size="16" font-weight="bold" fill="#0b2540" text-anchor="middle" font-style="normal">RefundsController</text>
+<text x="1195.0" y="306.0" font-size="12" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">[Component: Controller]</text>
+<text x="1195.0" y="334.0" font-size="12.5" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">/users/{id}/refunds</text>
+<rect x="50" y="436" width="190" height="104" rx="10" fill="#85bbf0" stroke="#638cb4" stroke-width="1.5"/>
+<text x="145.0" y="465.5" font-size="16" font-weight="bold" fill="#0b2540" text-anchor="middle" font-style="normal">AccountService</text>
+<text x="145.0" y="481.5" font-size="12" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">[Component: C# class]</text>
+<text x="145.0" y="509.5" font-size="12.5" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">สมัคร / login</text>
+<text x="145.0" y="526.5" font-size="12.5" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">username ห้ามซ้ำ</text>
+<polyline points="145.0,356 145.0,432" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="151.0" y="398" font-size="12.5" font-weight="normal" fill="#444444" text-anchor="start" font-style="normal">ส่งงานต่อให้</text>
+<rect x="260" y="436" width="190" height="104" rx="10" fill="#85bbf0" stroke="#638cb4" stroke-width="1.5"/>
+<text x="355.0" y="465.5" font-size="16" font-weight="bold" fill="#0b2540" text-anchor="middle" font-style="normal">CatalogService</text>
+<text x="355.0" y="481.5" font-size="12" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">[Component: C# class]</text>
+<text x="355.0" y="509.5" font-size="12.5" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">ค้นหาเกม</text>
+<text x="355.0" y="526.5" font-size="12.5" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">ตามชื่อและ genre</text>
+<polyline points="355.0,356 355.0,432" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="361.0" y="398" font-size="12.5" font-weight="normal" fill="#444444" text-anchor="start" font-style="normal">ส่งงานต่อให้</text>
+<rect x="470" y="436" width="190" height="104" rx="10" fill="#85bbf0" stroke="#638cb4" stroke-width="1.5"/>
+<text x="565.0" y="465.5" font-size="16" font-weight="bold" fill="#0b2540" text-anchor="middle" font-style="normal">CartService</text>
+<text x="565.0" y="481.5" font-size="12" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">[Component: C# class]</text>
+<text x="565.0" y="509.5" font-size="12.5" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">เพิ่ม/ลบตะกร้า</text>
+<text x="565.0" y="526.5" font-size="12.5" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">ห้ามซื้อเกมที่มีแล้ว</text>
+<polyline points="565.0,356 565.0,432" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="571.0" y="398" font-size="12.5" font-weight="normal" fill="#444444" text-anchor="start" font-style="normal">ส่งงานต่อให้</text>
+<rect x="680" y="436" width="190" height="104" rx="10" fill="#85bbf0" stroke="#638cb4" stroke-width="1.5"/>
+<text x="775.0" y="465.5" font-size="16" font-weight="bold" fill="#0b2540" text-anchor="middle" font-style="normal">PurchaseService</text>
+<text x="775.0" y="481.5" font-size="12" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">[Component: C# class]</text>
+<text x="775.0" y="509.5" font-size="12.5" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">ชำระเงินใน</text>
+<text x="775.0" y="526.5" font-size="12.5" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">transaction เดียว</text>
+<polyline points="775.0,356 775.0,432" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="781.0" y="398" font-size="12.5" font-weight="normal" fill="#444444" text-anchor="start" font-style="normal">ส่งงานต่อให้</text>
+<rect x="890" y="436" width="190" height="104" rx="10" fill="#85bbf0" stroke="#638cb4" stroke-width="1.5"/>
+<text x="985.0" y="465.5" font-size="16" font-weight="bold" fill="#0b2540" text-anchor="middle" font-style="normal">LibraryService</text>
+<text x="985.0" y="481.5" font-size="12" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">[Component: C# class]</text>
+<text x="985.0" y="509.5" font-size="12.5" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">Game List</text>
+<text x="985.0" y="526.5" font-size="12.5" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">จำลองการเล่น</text>
+<polyline points="985.0,356 985.0,432" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="991.0" y="398" font-size="12.5" font-weight="normal" fill="#444444" text-anchor="start" font-style="normal">ส่งงานต่อให้</text>
+<rect x="1100" y="436" width="190" height="104" rx="10" fill="#85bbf0" stroke="#638cb4" stroke-width="1.5"/>
+<text x="1195.0" y="465.5" font-size="16" font-weight="bold" fill="#0b2540" text-anchor="middle" font-style="normal">RefundService</text>
+<text x="1195.0" y="481.5" font-size="12" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">[Component: C# class]</text>
+<text x="1195.0" y="509.5" font-size="12.5" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">คืนเงินตามเงื่อนไข</text>
+<text x="1195.0" y="526.5" font-size="12.5" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">เอาเกมออกจากคลัง</text>
+<polyline points="1195.0,356 1195.0,432" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="1201.0" y="398" font-size="12.5" font-weight="normal" fill="#444444" text-anchor="start" font-style="normal">ส่งงานต่อให้</text>
+<polyline points="670,170 670,222" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="680" y="200" font-size="12.5" font-weight="normal" fill="#444444" text-anchor="start" font-style="normal">เรียก REST API [JSON/HTTP]</text>
+<rect x="50" y="590" width="190" height="96" rx="10" fill="#85bbf0" stroke="#638cb4" stroke-width="1.5"/>
+<text x="145.0" y="624.0" font-size="16" font-weight="bold" fill="#0b2540" text-anchor="middle" font-style="normal">PasswordHasher</text>
+<text x="145.0" y="640.0" font-size="12" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">[Component: static class]</text>
+<text x="145.0" y="668.0" font-size="12.5" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">PBKDF2 + salt</text>
+<polyline points="145,540 145,586" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="152" y="568" font-size="12.5" font-weight="normal" fill="#444444" text-anchor="start" font-style="normal">hash/ตรวจรหัสด้วย</text>
+<rect x="880" y="590" width="210" height="96" rx="10" fill="#85bbf0" stroke="#638cb4" stroke-width="1.5"/>
+<text x="985.0" y="615.5" font-size="16" font-weight="bold" fill="#0b2540" text-anchor="middle" font-style="normal">RefundPolicy</text>
+<text x="985.0" y="631.5" font-size="12" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">[Component: static class]</text>
+<text x="985.0" y="659.5" font-size="12.5" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">≤ 14 วัน และ</text>
+<text x="985.0" y="676.5" font-size="12.5" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">เล่น &lt; 2 ชั่วโมง</text>
+<polyline points="985,540 985,586" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="992" y="568" font-size="12.5" font-weight="normal" fill="#444444" text-anchor="start" font-style="normal">ใช้กฎ</text>
+<polyline points="1130,540 1094,586" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="1118" y="578" font-size="12.5" font-weight="normal" fill="#444444" text-anchor="start" font-style="normal">ใช้กฎ</text>
+<rect x="300" y="590" width="300" height="96" rx="10" fill="#85bbf0" stroke="#638cb4" stroke-width="1.5"/>
+<text x="450.0" y="615.5" font-size="16" font-weight="bold" fill="#0b2540" text-anchor="middle" font-style="normal">DomainExceptionHandler</text>
+<text x="450.0" y="631.5" font-size="12" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">[Component: IExceptionHandler]</text>
+<text x="450.0" y="659.5" font-size="12.5" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">แปลง DomainException</text>
+<text x="450.0" y="676.5" font-size="12.5" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">-&gt; HTTP 400/401/402/404/409</text>
+<rect x="380" y="752" width="300" height="104" rx="10" fill="#85bbf0" stroke="#638cb4" stroke-width="1.5"/>
+<text x="530.0" y="781.5" font-size="16" font-weight="bold" fill="#0b2540" text-anchor="middle" font-style="normal">GameStoreContext</text>
+<text x="530.0" y="797.5" font-size="12" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">[Component: EF Core DbContext]</text>
+<text x="530.0" y="825.5" font-size="12.5" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">Data Mapper (ORM)</text>
+<text x="530.0" y="842.5" font-size="12.5" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">LINQ -&gt; SQL, Models (scaffold)</text>
+<rect x="900" y="752" width="300" height="104" rx="10" fill="#85bbf0" stroke="#638cb4" stroke-width="1.5"/>
+<text x="1050.0" y="781.5" font-size="16" font-weight="bold" fill="#0b2540" text-anchor="middle" font-style="normal">SimulatedBankGateway</text>
+<text x="1050.0" y="797.5" font-size="12" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">[Component: IBankGateway]</text>
+<text x="1050.0" y="825.5" font-size="12.5" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">Gateway ไปยังธนาคาร</text>
+<text x="1050.0" y="842.5" font-size="12.5" font-weight="normal" fill="#0b2540" text-anchor="middle" font-style="normal">(ธนาคารจำลอง)</text>
+<polyline points="530,700 530,748" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="540" y="728" font-size="12.5" font-weight="normal" fill="#444444" text-anchor="start" font-style="normal">ทุก service อ่าน/เขียนข้อมูลผ่าน [LINQ]</text>
+<polyline points="775,540 775,712 960,712 960,748" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="784" y="650" font-size="12.5" font-weight="normal" fill="#444444" text-anchor="start" font-style="normal">ขอตัดเงินผ่าน</text>
+<polyline points="1180,540 1180,748" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="1188" y="650" font-size="12.5" font-weight="normal" fill="#444444" text-anchor="start" font-style="normal">ขอคืนเงินผ่าน</text>
+<polyline points="900,804 684,804" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="792" y="796" font-size="12.5" font-weight="normal" fill="#444444" text-anchor="middle" font-style="normal">ใช้</text>
+<path d="M410,934 L410,1026 A120.0,14 0 0 0 650,1026 L650,934 A120.0,14 0 0 0 410,934 Z" fill="#438dd5" stroke="#32699f" stroke-width="1.5"/>
+<ellipse cx="530.0" cy="934" rx="120.0" ry="14" fill="#438dd5" stroke="#32699f" stroke-width="1.5"/>
+<text x="530.0" y="981.5" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle" font-style="normal">Database</text>
+<text x="530.0" y="997.5" font-size="12" font-weight="normal" fill="#ffffff" text-anchor="middle" font-style="normal">[Container: PostgreSQL 18]</text>
+<rect x="900" y="925" width="300" height="110" rx="10" fill="#999999" stroke="#555" stroke-dasharray="6 4" stroke-width="1.5"/>
+<text x="1050.0" y="966.0" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle" font-style="normal">Bank System</text>
+<text x="1050.0" y="982.0" font-size="12" font-weight="normal" fill="#ffffff" text-anchor="middle" font-style="normal">[External - simulated]</text>
+<text x="1050.0" y="1010.0" font-size="12.5" font-weight="normal" fill="#ffffff" text-anchor="middle" font-style="normal">ยอดเงินเก็บใน table bank_accounts</text>
+<polyline points="530,856 530,916" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="540" y="892" font-size="12.5" font-weight="normal" fill="#444444" text-anchor="start" font-style="normal">อ่าน/เขียนข้อมูลลง [SQL, Npgsql]</text>
+<polyline points="1050,856 1050,921" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="1060" y="892" font-size="12.5" font-weight="normal" fill="#444444" text-anchor="start" font-style="normal">ตัดเงิน/คืนเงินที่</text>
+</svg>

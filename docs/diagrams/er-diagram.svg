@@ -1,0 +1,312 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1340" height="1000" viewBox="0 0 1340 1000" font-family="Leelawadee UI, Segoe UI, Tahoma, sans-serif">
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#707070"/></marker>
+  <marker id="open" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10" fill="none" stroke="#707070" stroke-width="1.5"/></marker>
+  <marker id="hollow" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="13" markerHeight="13" orient="auto-start-reverse">
+    <path d="M0,0 L12,6 L0,12 z" fill="#ffffff" stroke="#707070" stroke-width="1.2"/></marker>
+</defs>
+<rect width="1340" height="1000" fill="#ffffff"/>
+<text x="30" y="40" font-size="20" font-weight="bold" fill="#111111" text-anchor="start" font-style="normal">ER Diagram : gamestore (PostgreSQL)</text>
+<text x="30" y="62" font-size="13" font-weight="normal" fill="#666666" text-anchor="start" font-style="normal">ไฟล์ต้นฉบับ database/gamestore.dbml (ใช้กับ dbdiagram.io)  ·  สัญลักษณ์ crow's foot</text>
+<rect x="40" y="90" width="270" height="88" rx="6" fill="#ffffff" stroke="#2b6cb0" stroke-width="1.6"/>
+<path d="M40,122 L40,96 Q40,90 46,90 L304,90 Q310,90 310,96 L310,122 Z" fill="#2b6cb0"/>
+<text x="52" y="112" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="start" font-style="normal">genres</text>
+<rect x="48" y="131" width="26" height="15" rx="3" fill="#c99a00"/>
+<text x="61" y="142.5" font-size="9.5" font-weight="bold" fill="#ffffff" text-anchor="middle" font-style="normal">PK</text>
+<text x="80" y="143" font-size="13" font-weight="bold" fill="#222" text-anchor="start" font-style="normal">id</text>
+<text x="300" y="143" font-size="12" font-weight="normal" fill="#777" text-anchor="end" font-style="normal">integer</text>
+<rect x="41" y="150" width="268" height="24" fill="#f4f8fc"/>
+<rect x="48" y="155" width="26" height="15" rx="3" fill="#805ad5"/>
+<text x="61" y="166.5" font-size="9.5" font-weight="bold" fill="#ffffff" text-anchor="middle" font-style="normal">UQ</text>
+<text x="80" y="167" font-size="13" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">name</text>
+<text x="300" y="167" font-size="12" font-weight="normal" fill="#777" text-anchor="end" font-style="normal">varchar(50)</text>
+<rect x="360" y="90" width="270" height="88" rx="6" fill="#ffffff" stroke="#2b6cb0" stroke-width="1.6"/>
+<path d="M360,122 L360,96 Q360,90 366,90 L624,90 Q630,90 630,96 L630,122 Z" fill="#2b6cb0"/>
+<text x="372" y="112" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="start" font-style="normal">game_genres</text>
+<rect x="368" y="131" width="26" height="15" rx="3" fill="#c99a00"/>
+<text x="381" y="142.5" font-size="9.5" font-weight="bold" fill="#ffffff" text-anchor="middle" font-style="normal">PK</text>
+<text x="400" y="143" font-size="13" font-weight="bold" fill="#222" text-anchor="start" font-style="normal">game_id</text>
+<text x="620" y="143" font-size="12" font-weight="normal" fill="#777" text-anchor="end" font-style="normal">integer</text>
+<rect x="361" y="150" width="268" height="24" fill="#f4f8fc"/>
+<rect x="368" y="155" width="26" height="15" rx="3" fill="#c99a00"/>
+<text x="381" y="166.5" font-size="9.5" font-weight="bold" fill="#ffffff" text-anchor="middle" font-style="normal">PK</text>
+<text x="400" y="167" font-size="13" font-weight="bold" fill="#222" text-anchor="start" font-style="normal">genre_id</text>
+<text x="620" y="167" font-size="12" font-weight="normal" fill="#777" text-anchor="end" font-style="normal">integer</text>
+<text x="360" y="196" font-size="12" font-weight="normal" fill="#666" text-anchor="start" font-style="italic">table กลางของ many-to-many</text>
+<rect x="680" y="90" width="270" height="208" rx="6" fill="#ffffff" stroke="#2b6cb0" stroke-width="1.6"/>
+<path d="M680,122 L680,96 Q680,90 686,90 L944,90 Q950,90 950,96 L950,122 Z" fill="#2b6cb0"/>
+<text x="692" y="112" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="start" font-style="normal">games</text>
+<rect x="688" y="131" width="26" height="15" rx="3" fill="#c99a00"/>
+<text x="701" y="142.5" font-size="9.5" font-weight="bold" fill="#ffffff" text-anchor="middle" font-style="normal">PK</text>
+<text x="720" y="143" font-size="13" font-weight="bold" fill="#222" text-anchor="start" font-style="normal">id</text>
+<text x="940" y="143" font-size="12" font-weight="normal" fill="#777" text-anchor="end" font-style="normal">integer</text>
+<rect x="681" y="150" width="268" height="24" fill="#f4f8fc"/>
+<text x="720" y="167" font-size="13" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">title</text>
+<text x="940" y="167" font-size="12" font-weight="normal" fill="#777" text-anchor="end" font-style="normal">varchar(150)</text>
+<text x="720" y="191" font-size="13" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">developer</text>
+<text x="940" y="191" font-size="12" font-weight="normal" fill="#777" text-anchor="end" font-style="normal">varchar(100)</text>
+<rect x="681" y="198" width="268" height="24" fill="#f4f8fc"/>
+<text x="720" y="215" font-size="13" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">description</text>
+<text x="940" y="215" font-size="12" font-weight="normal" fill="#777" text-anchor="end" font-style="normal">varchar(2000)</text>
+<text x="720" y="239" font-size="13" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">price</text>
+<text x="940" y="239" font-size="12" font-weight="normal" fill="#777" text-anchor="end" font-style="normal">money</text>
+<rect x="681" y="246" width="268" height="24" fill="#f4f8fc"/>
+<text x="720" y="263" font-size="13" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">release_date</text>
+<text x="940" y="263" font-size="12" font-weight="normal" fill="#777" text-anchor="end" font-style="normal">date</text>
+<text x="720" y="287" font-size="13" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">is_active</text>
+<text x="940" y="287" font-size="12" font-weight="normal" fill="#777" text-anchor="end" font-style="normal">boolean</text>
+<rect x="1030" y="90" width="270" height="136" rx="6" fill="#ffffff" stroke="#2b6cb0" stroke-width="1.6"/>
+<path d="M1030,122 L1030,96 Q1030,90 1036,90 L1294,90 Q1300,90 1300,96 L1300,122 Z" fill="#2b6cb0"/>
+<text x="1042" y="112" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="start" font-style="normal">cart_items</text>
+<rect x="1038" y="131" width="26" height="15" rx="3" fill="#c99a00"/>
+<text x="1051" y="142.5" font-size="9.5" font-weight="bold" fill="#ffffff" text-anchor="middle" font-style="normal">PK</text>
+<text x="1070" y="143" font-size="13" font-weight="bold" fill="#222" text-anchor="start" font-style="normal">id</text>
+<text x="1290" y="143" font-size="12" font-weight="normal" fill="#777" text-anchor="end" font-style="normal">integer</text>
+<rect x="1031" y="150" width="268" height="24" fill="#f4f8fc"/>
+<rect x="1038" y="155" width="26" height="15" rx="3" fill="#2f855a"/>
+<text x="1051" y="166.5" font-size="9.5" font-weight="bold" fill="#ffffff" text-anchor="middle" font-style="normal">FK</text>
+<text x="1070" y="167" font-size="13" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">user_id</text>
+<text x="1290" y="167" font-size="12" font-weight="normal" fill="#777" text-anchor="end" font-style="normal">integer</text>
+<rect x="1038" y="179" width="26" height="15" rx="3" fill="#2f855a"/>
+<text x="1051" y="190.5" font-size="9.5" font-weight="bold" fill="#ffffff" text-anchor="middle" font-style="normal">FK</text>
+<text x="1070" y="191" font-size="13" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">game_id</text>
+<text x="1290" y="191" font-size="12" font-weight="normal" fill="#777" text-anchor="end" font-style="normal">integer</text>
+<rect x="1031" y="198" width="268" height="24" fill="#f4f8fc"/>
+<text x="1070" y="215" font-size="13" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">added_at</text>
+<text x="1290" y="215" font-size="12" font-weight="normal" fill="#777" text-anchor="end" font-style="normal">timestamp</text>
+<rect x="1030" y="400" width="270" height="184" rx="6" fill="#ffffff" stroke="#2b6cb0" stroke-width="1.6"/>
+<path d="M1030,432 L1030,406 Q1030,400 1036,400 L1294,400 Q1300,400 1300,406 L1300,432 Z" fill="#2b6cb0"/>
+<text x="1042" y="422" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="start" font-style="normal">users</text>
+<rect x="1038" y="441" width="26" height="15" rx="3" fill="#c99a00"/>
+<text x="1051" y="452.5" font-size="9.5" font-weight="bold" fill="#ffffff" text-anchor="middle" font-style="normal">PK</text>
+<text x="1070" y="453" font-size="13" font-weight="bold" fill="#222" text-anchor="start" font-style="normal">id</text>
+<text x="1290" y="453" font-size="12" font-weight="normal" fill="#777" text-anchor="end" font-style="normal">integer</text>
+<rect x="1031" y="460" width="268" height="24" fill="#f4f8fc"/>
+<rect x="1038" y="465" width="26" height="15" rx="3" fill="#805ad5"/>
+<text x="1051" y="476.5" font-size="9.5" font-weight="bold" fill="#ffffff" text-anchor="middle" font-style="normal">UQ</text>
+<text x="1070" y="477" font-size="13" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">username</text>
+<text x="1290" y="477" font-size="12" font-weight="normal" fill="#777" text-anchor="end" font-style="normal">varchar(50)</text>
+<text x="1070" y="501" font-size="13" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">password_hash</text>
+<text x="1290" y="501" font-size="12" font-weight="normal" fill="#777" text-anchor="end" font-style="normal">varchar(200)</text>
+<rect x="1031" y="508" width="268" height="24" fill="#f4f8fc"/>
+<text x="1070" y="525" font-size="13" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">display_name</text>
+<text x="1290" y="525" font-size="12" font-weight="normal" fill="#777" text-anchor="end" font-style="normal">varchar(100)</text>
+<text x="1070" y="549" font-size="13" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">email</text>
+<text x="1290" y="549" font-size="12" font-weight="normal" fill="#777" text-anchor="end" font-style="normal">varchar(100)</text>
+<rect x="1031" y="556" width="268" height="24" fill="#f4f8fc"/>
+<text x="1070" y="573" font-size="13" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">created_at</text>
+<text x="1290" y="573" font-size="12" font-weight="normal" fill="#777" text-anchor="end" font-style="normal">timestamp</text>
+<rect x="680" y="400" width="270" height="208" rx="6" fill="#ffffff" stroke="#2b6cb0" stroke-width="1.6"/>
+<path d="M680,432 L680,406 Q680,400 686,400 L944,400 Q950,400 950,406 L950,432 Z" fill="#2b6cb0"/>
+<text x="692" y="422" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="start" font-style="normal">library_items</text>
+<rect x="688" y="441" width="26" height="15" rx="3" fill="#c99a00"/>
+<text x="701" y="452.5" font-size="9.5" font-weight="bold" fill="#ffffff" text-anchor="middle" font-style="normal">PK</text>
+<text x="720" y="453" font-size="13" font-weight="bold" fill="#222" text-anchor="start" font-style="normal">id</text>
+<text x="940" y="453" font-size="12" font-weight="normal" fill="#777" text-anchor="end" font-style="normal">integer</text>
+<rect x="681" y="460" width="268" height="24" fill="#f4f8fc"/>
+<rect x="688" y="465" width="26" height="15" rx="3" fill="#2f855a"/>
+<text x="701" y="476.5" font-size="9.5" font-weight="bold" fill="#ffffff" text-anchor="middle" font-style="normal">FK</text>
+<text x="720" y="477" font-size="13" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">user_id</text>
+<text x="940" y="477" font-size="12" font-weight="normal" fill="#777" text-anchor="end" font-style="normal">integer</text>
+<rect x="688" y="489" width="26" height="15" rx="3" fill="#2f855a"/>
+<text x="701" y="500.5" font-size="9.5" font-weight="bold" fill="#ffffff" text-anchor="middle" font-style="normal">FK</text>
+<text x="720" y="501" font-size="13" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">game_id</text>
+<text x="940" y="501" font-size="12" font-weight="normal" fill="#777" text-anchor="end" font-style="normal">integer</text>
+<rect x="681" y="508" width="268" height="24" fill="#f4f8fc"/>
+<rect x="688" y="513" width="26" height="15" rx="3" fill="#2f855a"/>
+<text x="701" y="524.5" font-size="9.5" font-weight="bold" fill="#ffffff" text-anchor="middle" font-style="normal">FK</text>
+<text x="720" y="525" font-size="13" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">order_item_id</text>
+<text x="940" y="525" font-size="12" font-weight="normal" fill="#777" text-anchor="end" font-style="normal">integer</text>
+<text x="720" y="549" font-size="13" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">acquired_at</text>
+<text x="940" y="549" font-size="12" font-weight="normal" fill="#777" text-anchor="end" font-style="normal">timestamp</text>
+<rect x="681" y="556" width="268" height="24" fill="#f4f8fc"/>
+<text x="720" y="573" font-size="13" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">playtime_minutes</text>
+<text x="940" y="573" font-size="12" font-weight="normal" fill="#777" text-anchor="end" font-style="normal">integer</text>
+<text x="720" y="597" font-size="13" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">last_played_at</text>
+<text x="940" y="597" font-size="12" font-weight="normal" fill="#777" text-anchor="end" font-style="normal">timestamp</text>
+<text x="680" y="626" font-size="12" font-weight="normal" fill="#666" text-anchor="start" font-style="italic">Game List ของลูกค้า</text>
+<rect x="360" y="400" width="270" height="160" rx="6" fill="#ffffff" stroke="#2b6cb0" stroke-width="1.6"/>
+<path d="M360,432 L360,406 Q360,400 366,400 L624,400 Q630,400 630,406 L630,432 Z" fill="#2b6cb0"/>
+<text x="372" y="422" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="start" font-style="normal">order_items</text>
+<rect x="368" y="441" width="26" height="15" rx="3" fill="#c99a00"/>
+<text x="381" y="452.5" font-size="9.5" font-weight="bold" fill="#ffffff" text-anchor="middle" font-style="normal">PK</text>
+<text x="400" y="453" font-size="13" font-weight="bold" fill="#222" text-anchor="start" font-style="normal">id</text>
+<text x="620" y="453" font-size="12" font-weight="normal" fill="#777" text-anchor="end" font-style="normal">integer</text>
+<rect x="361" y="460" width="268" height="24" fill="#f4f8fc"/>
+<rect x="368" y="465" width="26" height="15" rx="3" fill="#2f855a"/>
+<text x="381" y="476.5" font-size="9.5" font-weight="bold" fill="#ffffff" text-anchor="middle" font-style="normal">FK</text>
+<text x="400" y="477" font-size="13" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">order_id</text>
+<text x="620" y="477" font-size="12" font-weight="normal" fill="#777" text-anchor="end" font-style="normal">integer</text>
+<rect x="368" y="489" width="26" height="15" rx="3" fill="#2f855a"/>
+<text x="381" y="500.5" font-size="9.5" font-weight="bold" fill="#ffffff" text-anchor="middle" font-style="normal">FK</text>
+<text x="400" y="501" font-size="13" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">game_id</text>
+<text x="620" y="501" font-size="12" font-weight="normal" fill="#777" text-anchor="end" font-style="normal">integer</text>
+<rect x="361" y="508" width="268" height="24" fill="#f4f8fc"/>
+<text x="400" y="525" font-size="13" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">price</text>
+<text x="620" y="525" font-size="12" font-weight="normal" fill="#777" text-anchor="end" font-style="normal">money</text>
+<text x="400" y="549" font-size="13" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">is_refunded</text>
+<text x="620" y="549" font-size="12" font-weight="normal" fill="#777" text-anchor="end" font-style="normal">boolean</text>
+<text x="360" y="578" font-size="12" font-weight="normal" fill="#666" text-anchor="start" font-style="italic">price = ราคา ณ วันที่ซื้อ</text>
+<rect x="40" y="400" width="270" height="184" rx="6" fill="#ffffff" stroke="#2b6cb0" stroke-width="1.6"/>
+<path d="M40,432 L40,406 Q40,400 46,400 L304,400 Q310,400 310,406 L310,432 Z" fill="#2b6cb0"/>
+<text x="52" y="422" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="start" font-style="normal">refunds</text>
+<rect x="48" y="441" width="26" height="15" rx="3" fill="#c99a00"/>
+<text x="61" y="452.5" font-size="9.5" font-weight="bold" fill="#ffffff" text-anchor="middle" font-style="normal">PK</text>
+<text x="80" y="453" font-size="13" font-weight="bold" fill="#222" text-anchor="start" font-style="normal">id</text>
+<text x="300" y="453" font-size="12" font-weight="normal" fill="#777" text-anchor="end" font-style="normal">integer</text>
+<rect x="41" y="460" width="268" height="24" fill="#f4f8fc"/>
+<rect x="48" y="465" width="26" height="15" rx="3" fill="#2f855a"/>
+<text x="61" y="476.5" font-size="9.5" font-weight="bold" fill="#ffffff" text-anchor="middle" font-style="normal">FK</text>
+<text x="80" y="477" font-size="13" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">order_item_id</text>
+<text x="300" y="477" font-size="12" font-weight="normal" fill="#777" text-anchor="end" font-style="normal">integer</text>
+<text x="80" y="501" font-size="13" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">amount</text>
+<text x="300" y="501" font-size="12" font-weight="normal" fill="#777" text-anchor="end" font-style="normal">money</text>
+<rect x="41" y="508" width="268" height="24" fill="#f4f8fc"/>
+<text x="80" y="525" font-size="13" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">reason</text>
+<text x="300" y="525" font-size="12" font-weight="normal" fill="#777" text-anchor="end" font-style="normal">varchar(500)</text>
+<text x="80" y="549" font-size="13" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">refunded_at</text>
+<text x="300" y="549" font-size="12" font-weight="normal" fill="#777" text-anchor="end" font-style="normal">timestamp</text>
+<rect x="41" y="556" width="268" height="24" fill="#f4f8fc"/>
+<text x="80" y="573" font-size="13" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">payment_ref</text>
+<text x="300" y="573" font-size="12" font-weight="normal" fill="#777" text-anchor="end" font-style="normal">varchar(40)</text>
+<rect x="360" y="720" width="270" height="184" rx="6" fill="#ffffff" stroke="#2b6cb0" stroke-width="1.6"/>
+<path d="M360,752 L360,726 Q360,720 366,720 L624,720 Q630,720 630,726 L630,752 Z" fill="#2b6cb0"/>
+<text x="372" y="742" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="start" font-style="normal">orders</text>
+<rect x="368" y="761" width="26" height="15" rx="3" fill="#c99a00"/>
+<text x="381" y="772.5" font-size="9.5" font-weight="bold" fill="#ffffff" text-anchor="middle" font-style="normal">PK</text>
+<text x="400" y="773" font-size="13" font-weight="bold" fill="#222" text-anchor="start" font-style="normal">id</text>
+<text x="620" y="773" font-size="12" font-weight="normal" fill="#777" text-anchor="end" font-style="normal">integer</text>
+<rect x="361" y="780" width="268" height="24" fill="#f4f8fc"/>
+<rect x="368" y="785" width="26" height="15" rx="3" fill="#2f855a"/>
+<text x="381" y="796.5" font-size="9.5" font-weight="bold" fill="#ffffff" text-anchor="middle" font-style="normal">FK</text>
+<text x="400" y="797" font-size="13" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">user_id</text>
+<text x="620" y="797" font-size="12" font-weight="normal" fill="#777" text-anchor="end" font-style="normal">integer</text>
+<text x="400" y="821" font-size="13" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">ordered_at</text>
+<text x="620" y="821" font-size="12" font-weight="normal" fill="#777" text-anchor="end" font-style="normal">timestamp</text>
+<rect x="361" y="828" width="268" height="24" fill="#f4f8fc"/>
+<text x="400" y="845" font-size="13" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">total_amount</text>
+<text x="620" y="845" font-size="12" font-weight="normal" fill="#777" text-anchor="end" font-style="normal">money</text>
+<text x="400" y="869" font-size="13" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">bank_account_no</text>
+<text x="620" y="869" font-size="12" font-weight="normal" fill="#777" text-anchor="end" font-style="normal">varchar(20)</text>
+<rect x="361" y="876" width="268" height="24" fill="#f4f8fc"/>
+<text x="400" y="893" font-size="13" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">payment_ref</text>
+<text x="620" y="893" font-size="12" font-weight="normal" fill="#777" text-anchor="end" font-style="normal">varchar(40)</text>
+<rect x="40" y="720" width="270" height="136" rx="6" fill="#ffffff" stroke="#888888" stroke-width="1.6"/>
+<path d="M40,752 L40,726 Q40,720 46,720 L304,720 Q310,720 310,726 L310,752 Z" fill="#888888"/>
+<text x="52" y="742" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="start" font-style="normal">bank_accounts</text>
+<rect x="48" y="761" width="26" height="15" rx="3" fill="#c99a00"/>
+<text x="61" y="772.5" font-size="9.5" font-weight="bold" fill="#ffffff" text-anchor="middle" font-style="normal">PK</text>
+<text x="80" y="773" font-size="13" font-weight="bold" fill="#222" text-anchor="start" font-style="normal">id</text>
+<text x="300" y="773" font-size="12" font-weight="normal" fill="#777" text-anchor="end" font-style="normal">integer</text>
+<rect x="41" y="780" width="268" height="24" fill="#f4f8fc"/>
+<rect x="48" y="785" width="26" height="15" rx="3" fill="#805ad5"/>
+<text x="61" y="796.5" font-size="9.5" font-weight="bold" fill="#ffffff" text-anchor="middle" font-style="normal">UQ</text>
+<text x="80" y="797" font-size="13" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">account_no</text>
+<text x="300" y="797" font-size="12" font-weight="normal" fill="#777" text-anchor="end" font-style="normal">varchar(20)</text>
+<text x="80" y="821" font-size="13" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">owner_name</text>
+<text x="300" y="821" font-size="12" font-weight="normal" fill="#777" text-anchor="end" font-style="normal">varchar(100)</text>
+<rect x="41" y="828" width="268" height="24" fill="#f4f8fc"/>
+<text x="80" y="845" font-size="13" font-weight="normal" fill="#222" text-anchor="start" font-style="normal">balance</text>
+<text x="300" y="845" font-size="12" font-weight="normal" fill="#777" text-anchor="end" font-style="normal">money</text>
+<text x="40" y="874" font-size="12" font-weight="normal" fill="#666" text-anchor="start" font-style="italic">ธนาคารจำลอง (ระบบภายนอก) ไม่มี FK</text>
+<polyline points="310,138.0 360,162.0" fill="none" stroke="#444" stroke-width="1.5"/>
+<line x1="320.67403300042434" y1="134.24966408093198" x2="313.75033591906805" y2="148.67403300042437" stroke="#444" stroke-width="1.5"/>
+<line x1="326.08317134523395" y1="136.8460504864406" x2="319.15947426387766" y2="151.27041940593298" stroke="#444" stroke-width="1.5"/>
+<line x1="345.5756310805076" y1="155.07630291864365" x2="363.8945796082629" y2="153.88629248278554" stroke="#444" stroke-width="1.5"/>
+<line x1="345.5756310805076" y1="155.07630291864365" x2="360.0" y2="162.0" stroke="#444" stroke-width="1.5"/>
+<line x1="345.5756310805076" y1="155.07630291864365" x2="356.1054203917371" y2="170.11370751721446" stroke="#444" stroke-width="1.5"/>
+<line x1="338.5076903099564" y1="160.55756310805077" x2="345.4313873913127" y2="146.13319418855838" stroke="#444" stroke-width="1.5"/>
+<polyline points="680,138.0 630,138.0" fill="none" stroke="#444" stroke-width="1.5"/>
+<line x1="672.0" y1="146.0" x2="672.0" y2="130.0" stroke="#444" stroke-width="1.5"/>
+<line x1="666.0" y1="146.0" x2="666.0" y2="130.0" stroke="#444" stroke-width="1.5"/>
+<line x1="646.0" y1="138.0" x2="630.0" y2="147.0" stroke="#444" stroke-width="1.5"/>
+<line x1="646.0" y1="138.0" x2="630.0" y2="138.0" stroke="#444" stroke-width="1.5"/>
+<line x1="646.0" y1="138.0" x2="630.0" y2="129.0" stroke="#444" stroke-width="1.5"/>
+<line x1="650.0" y1="130.0" x2="650.0" y2="146.0" stroke="#444" stroke-width="1.5"/>
+<polyline points="950,138.0 1030,186.0" fill="none" stroke="#444" stroke-width="1.5"/>
+<line x1="960.9759094491206" y1="135.25602263771984" x2="952.7439773622801" y2="148.97590944912056" stroke="#444" stroke-width="1.5"/>
+<line x1="966.1208670033959" y1="138.342997170285" x2="957.8889349165554" y2="152.06288398168573" stroke="#444" stroke-width="1.5"/>
+<line x1="1016.2801131885993" y1="177.76806791315957" x2="1034.6304617988478" y2="178.2825636685871" stroke="#444" stroke-width="1.5"/>
+<line x1="1016.2801131885993" y1="177.76806791315957" x2="1030.0" y2="186.0" stroke="#444" stroke-width="1.5"/>
+<line x1="1016.2801131885993" y1="177.76806791315957" x2="1025.3695382011522" y2="193.7174363314129" stroke="#444" stroke-width="1.5"/>
+<line x1="1008.7341754423288" y1="182.57002829714983" x2="1016.9661075291693" y2="168.8501414857491" stroke="#444" stroke-width="1.5"/>
+<polyline points="1165,400 1165,226" fill="none" stroke="#444" stroke-width="1.5"/>
+<line x1="1157.0" y1="392.0" x2="1173.0" y2="392.0" stroke="#444" stroke-width="1.5"/>
+<line x1="1157.0" y1="386.0" x2="1173.0" y2="386.0" stroke="#444" stroke-width="1.5"/>
+<line x1="1165.0" y1="242.0" x2="1156.0" y2="226.0" stroke="#444" stroke-width="1.5"/>
+<line x1="1165.0" y1="242.0" x2="1165.0" y2="226.0" stroke="#444" stroke-width="1.5"/>
+<line x1="1165.0" y1="242.0" x2="1174.0" y2="226.0" stroke="#444" stroke-width="1.5"/>
+<line x1="1173.0" y1="246.0" x2="1157.0" y2="246.0" stroke="#444" stroke-width="1.5"/>
+<polyline points="1030,448.0 950,472.0" fill="none" stroke="#444" stroke-width="1.5"/>
+<line x1="1024.6361728027616" y1="457.9613933663" x2="1020.0386066337" y2="442.63617280276156" stroke="#444" stroke-width="1.5"/>
+<line x1="1018.8892150914347" y1="459.68548067969806" x2="1014.2916489223732" y2="444.3602601161596" stroke="#444" stroke-width="1.5"/>
+<line x1="965.3252205635384" y1="467.4024338309385" x2="952.5861309700971" y2="480.62043656699035" stroke="#444" stroke-width="1.5"/>
+<line x1="965.3252205635384" y1="467.4024338309385" x2="950.0" y2="472.0" stroke="#444" stroke-width="1.5"/>
+<line x1="965.3252205635384" y1="467.4024338309385" x2="947.4138690299029" y2="463.37956343300965" stroke="#444" stroke-width="1.5"/>
+<line x1="966.8577426198923" y1="458.5904320069039" x2="971.4553087889539" y2="473.9156525704423" stroke="#444" stroke-width="1.5"/>
+<polyline points="870,298 870,400" fill="none" stroke="#444" stroke-width="1.5"/>
+<line x1="878.0" y1="306.0" x2="862.0" y2="306.0" stroke="#444" stroke-width="1.5"/>
+<line x1="878.0" y1="312.0" x2="862.0" y2="312.0" stroke="#444" stroke-width="1.5"/>
+<line x1="870.0" y1="384.0" x2="879.0" y2="400.0" stroke="#444" stroke-width="1.5"/>
+<line x1="870.0" y1="384.0" x2="870.0" y2="400.0" stroke="#444" stroke-width="1.5"/>
+<line x1="870.0" y1="384.0" x2="861.0" y2="400.0" stroke="#444" stroke-width="1.5"/>
+<line x1="862.0" y1="380.0" x2="878.0" y2="380.0" stroke="#444" stroke-width="1.5"/>
+<polyline points="630,448.0 680,520.0" fill="none" stroke="#444" stroke-width="1.5"/>
+<line x1="641.1341262013491" y1="450.0077932494236" x2="627.9922067505763" y2="459.13412620134915" stroke="#444" stroke-width="1.5"/>
+<line x1="644.5565010583213" y1="454.9360130434634" x2="631.4145816075485" y2="464.0623459953889" stroke="#444" stroke-width="1.5"/>
+<line x1="668.8658737986509" y1="517.9922067505763" x2="682.0077932494237" y2="508.86587379865085" stroke="#444" stroke-width="1.5"/>
+<circle cx="668.5920838100931" cy="503.5726006865341" r="5.5" fill="#ffffff" stroke="#444" stroke-width="1.5"/>
+<polyline points="720,298 720,350 560,350 560,400" fill="none" stroke="#444" stroke-width="1.5"/>
+<line x1="728.0" y1="306.0" x2="712.0" y2="306.0" stroke="#444" stroke-width="1.5"/>
+<line x1="728.0" y1="312.0" x2="712.0" y2="312.0" stroke="#444" stroke-width="1.5"/>
+<line x1="560.0" y1="384.0" x2="569.0" y2="400.0" stroke="#444" stroke-width="1.5"/>
+<line x1="560.0" y1="384.0" x2="560.0" y2="400.0" stroke="#444" stroke-width="1.5"/>
+<line x1="560.0" y1="384.0" x2="551.0" y2="400.0" stroke="#444" stroke-width="1.5"/>
+<line x1="552.0" y1="380.0" x2="568.0" y2="380.0" stroke="#444" stroke-width="1.5"/>
+<polyline points="360,448.0 310,472.0" fill="none" stroke="#444" stroke-width="1.5"/>
+<line x1="356.24966408093195" y1="458.67403300042434" x2="349.32596699957566" y2="444.24966408093195" stroke="#444" stroke-width="1.5"/>
+<line x1="350.84052573612234" y1="461.270419405933" x2="343.91682865476605" y2="446.8460504864406" stroke="#444" stroke-width="1.5"/>
+<line x1="313.75033591906805" y1="461.32596699957566" x2="320.67403300042434" y2="475.75033591906805" stroke="#444" stroke-width="1.5"/>
+<circle cx="328.03046114936546" cy="463.3453786483046" r="5.5" fill="#ffffff" stroke="#444" stroke-width="1.5"/>
+<polyline points="495,720 495,560" fill="none" stroke="#444" stroke-width="1.5"/>
+<line x1="487.0" y1="712.0" x2="503.0" y2="712.0" stroke="#444" stroke-width="1.5"/>
+<line x1="487.0" y1="706.0" x2="503.0" y2="706.0" stroke="#444" stroke-width="1.5"/>
+<line x1="495.0" y1="576.0" x2="486.0" y2="560.0" stroke="#444" stroke-width="1.5"/>
+<line x1="495.0" y1="576.0" x2="495.0" y2="560.0" stroke="#444" stroke-width="1.5"/>
+<line x1="495.0" y1="576.0" x2="504.0" y2="560.0" stroke="#444" stroke-width="1.5"/>
+<line x1="503.0" y1="580.0" x2="487.0" y2="580.0" stroke="#444" stroke-width="1.5"/>
+<polyline points="1165,584 1165,792.0 630,792.0" fill="none" stroke="#444" stroke-width="1.5"/>
+<line x1="1173.0" y1="592.0" x2="1157.0" y2="592.0" stroke="#444" stroke-width="1.5"/>
+<line x1="1173.0" y1="598.0" x2="1157.0" y2="598.0" stroke="#444" stroke-width="1.5"/>
+<line x1="646.0" y1="792.0" x2="630.0" y2="801.0" stroke="#444" stroke-width="1.5"/>
+<line x1="646.0" y1="792.0" x2="630.0" y2="792.0" stroke="#444" stroke-width="1.5"/>
+<line x1="646.0" y1="792.0" x2="630.0" y2="783.0" stroke="#444" stroke-width="1.5"/>
+<line x1="650.0" y1="784.0" x2="650.0" y2="800.0" stroke="#444" stroke-width="1.5"/>
+<rect x="760" y="870" width="540" height="100" rx="6" fill="#fafafa" stroke="#ccc"/>
+<text x="772" y="890" font-size="12" font-weight="bold" fill="#555" text-anchor="start" font-style="normal">Legend</text>
+<polyline points="780,915 880,915" fill="none" stroke="#444" stroke-width="1.5"/>
+<line x1="788.0" y1="907.0" x2="788.0" y2="923.0" stroke="#444" stroke-width="1.5"/>
+<line x1="794.0" y1="907.0" x2="794.0" y2="923.0" stroke="#444" stroke-width="1.5"/>
+<line x1="864.0" y1="915.0" x2="880.0" y2="906.0" stroke="#444" stroke-width="1.5"/>
+<line x1="864.0" y1="915.0" x2="880.0" y2="915.0" stroke="#444" stroke-width="1.5"/>
+<line x1="864.0" y1="915.0" x2="880.0" y2="924.0" stroke="#444" stroke-width="1.5"/>
+<line x1="860.0" y1="923.0" x2="860.0" y2="907.0" stroke="#444" stroke-width="1.5"/>
+<text x="890" y="919" font-size="12" font-weight="normal" fill="#444" text-anchor="start" font-style="normal">one-to-many (1 : *)</text>
+<polyline points="780,948 880,948" fill="none" stroke="#444" stroke-width="1.5"/>
+<line x1="788.0" y1="940.0" x2="788.0" y2="956.0" stroke="#444" stroke-width="1.5"/>
+<line x1="794.0" y1="940.0" x2="794.0" y2="956.0" stroke="#444" stroke-width="1.5"/>
+<line x1="872.0" y1="956.0" x2="872.0" y2="940.0" stroke="#444" stroke-width="1.5"/>
+<circle cx="860.0" cy="948.0" r="5.5" fill="#ffffff" stroke="#444" stroke-width="1.5"/>
+<text x="890" y="952" font-size="12" font-weight="normal" fill="#444" text-anchor="start" font-style="normal">one-to-zero-or-one (1 : 0..1)</text>
+<rect x="1140" y="904" width="26" height="15" rx="3" fill="#c99a00"/>
+<text x="1153" y="915.5" font-size="9.5" font-weight="bold" fill="#fff" text-anchor="middle" font-style="normal">PK</text>
+<text x="1174" y="916" font-size="12" font-weight="normal" fill="#444" text-anchor="start" font-style="normal">Primary Key</text>
+<rect x="1140" y="926" width="26" height="15" rx="3" fill="#2f855a"/>
+<text x="1153" y="937.5" font-size="9.5" font-weight="bold" fill="#fff" text-anchor="middle" font-style="normal">FK</text>
+<text x="1174" y="938" font-size="12" font-weight="normal" fill="#444" text-anchor="start" font-style="normal">Foreign Key</text>
+<rect x="1140" y="948" width="26" height="15" rx="3" fill="#805ad5"/>
+<text x="1153" y="959.5" font-size="9.5" font-weight="bold" fill="#fff" text-anchor="middle" font-style="normal">UQ</text>
+<text x="1174" y="960" font-size="12" font-weight="normal" fill="#444" text-anchor="start" font-style="normal">Unique</text>
+</svg>

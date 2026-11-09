@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1380" height="780" viewBox="0 0 1380 780" font-family="Leelawadee UI, Segoe UI, Tahoma, sans-serif">
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#707070"/></marker>
+  <marker id="open" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10" fill="none" stroke="#707070" stroke-width="1.5"/></marker>
+  <marker id="hollow" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="13" markerHeight="13" orient="auto-start-reverse">
+    <path d="M0,0 L12,6 L0,12 z" fill="#ffffff" stroke="#707070" stroke-width="1.2"/></marker>
+</defs>
+<rect width="1380" height="780" fill="#ffffff"/>
+<text x="30" y="40" font-size="20" font-weight="bold" fill="#111111" text-anchor="start" font-style="normal">[Container] Online Game Store (OGS) - 3 Tier Architecture</text>
+<text x="30" y="62" font-size="13" font-weight="normal" fill="#666666" text-anchor="start" font-style="normal">แต่ละ container คือ deployable unit (process) แยกกัน</text>
+<circle cx="125" cy="282" r="32" fill="#08427b" stroke="#06315c" stroke-width="1.5"/>
+<rect x="20.0" y="306" width="210" height="140" rx="28" fill="#08427b" stroke="#06315c" stroke-width="1.5"/>
+<text x="125.0" y="353.5" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle" font-style="normal">Customer (ลูกค้า)</text>
+<text x="125.0" y="369.5" font-size="12" font-weight="normal" fill="#ffffff" text-anchor="middle" font-style="normal">[Person]</text>
+<text x="125.0" y="397.5" font-size="12.5" font-weight="normal" fill="#ffffff" text-anchor="middle" font-style="normal">ผู้เลือกซื้อเกม</text>
+<text x="125.0" y="414.5" font-size="12.5" font-weight="normal" fill="#ffffff" text-anchor="middle" font-style="normal">และขอคืนเงิน</text>
+<rect x="300" y="90" width="1050" height="500" rx="6" fill="none" stroke="#8a8a8a" stroke-width="1.5" stroke-dasharray="10 6"/>
+<text x="314" y="560" font-size="15" font-weight="bold" fill="#555555" text-anchor="start" font-style="normal">Online Game Store (OGS)</text>
+<text x="314" y="578" font-size="12" font-weight="normal" fill="#777777" text-anchor="start" font-style="normal">[Software System]</text>
+<text x="460" y="150" font-size="14" font-weight="bold" fill="#1168bd" text-anchor="middle" font-style="normal">Client Tier</text>
+<text x="835" y="150" font-size="14" font-weight="bold" fill="#1168bd" text-anchor="middle" font-style="normal">Server Tier (Application Server)</text>
+<text x="1190" y="150" font-size="14" font-weight="bold" fill="#1168bd" text-anchor="middle" font-style="normal">Database Tier</text>
+<rect x="330" y="190" width="260" height="190" rx="6" fill="#438dd5" stroke="#32699f" stroke-width="1.5"/>
+<rect x="330" y="190" width="260" height="20" rx="6" fill="#32699f"/>
+<rect x="330" y="202" width="260" height="8" fill="#32699f"/>
+<circle cx="344" cy="200" r="4" fill="#ffffff" opacity="0.8"/>
+<circle cx="358" cy="200" r="4" fill="#ffffff" opacity="0.8"/>
+<circle cx="372" cy="200" r="4" fill="#ffffff" opacity="0.8"/>
+<text x="460.0" y="272.5" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle" font-style="normal">Game Store Client</text>
+<text x="460.0" y="288.5" font-size="12" font-weight="normal" fill="#ffffff" text-anchor="middle" font-style="normal">[Container: C# WinForms, .NET 10]</text>
+<text x="460.0" y="316.5" font-size="12.5" font-weight="normal" fill="#ffffff" text-anchor="middle" font-style="normal">หน้าจอให้ลูกค้าใช้งาน</text>
+<text x="460.0" y="333.5" font-size="12.5" font-weight="normal" fill="#ffffff" text-anchor="middle" font-style="normal">เรียก REST API ด้วย HttpClient</text>
+<rect x="705" y="190" width="270" height="190" rx="10" fill="#438dd5" stroke="#32699f" stroke-width="1.5"/>
+<text x="840.0" y="254.0" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle" font-style="normal">Game Store API</text>
+<text x="840.0" y="270.0" font-size="12" font-weight="normal" fill="#ffffff" text-anchor="middle" font-style="normal">[Container: ASP.NET Core 10 Web API]</text>
+<text x="840.0" y="298.0" font-size="12.5" font-weight="normal" fill="#ffffff" text-anchor="middle" font-style="normal">Business Logic ทั้งหมด</text>
+<text x="840.0" y="315.0" font-size="12.5" font-weight="normal" fill="#ffffff" text-anchor="middle" font-style="normal">+ Data Access (Entity Framework)</text>
+<text x="840.0" y="332.0" font-size="12.5" font-weight="normal" fill="#ffffff" text-anchor="middle" font-style="normal">เปิดให้เรียกผ่าน REST API</text>
+<path d="M1070,194 L1070,376 A120.0,14 0 0 0 1310,376 L1310,194 A120.0,14 0 0 0 1070,194 Z" fill="#438dd5" stroke="#32699f" stroke-width="1.5"/>
+<ellipse cx="1190.0" cy="194" rx="120.0" ry="14" fill="#438dd5" stroke="#32699f" stroke-width="1.5"/>
+<text x="1190.0" y="269.5" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle" font-style="normal">Database</text>
+<text x="1190.0" y="285.5" font-size="12" font-weight="normal" fill="#ffffff" text-anchor="middle" font-style="normal">[Container: PostgreSQL 18]</text>
+<text x="1190.0" y="313.5" font-size="12.5" font-weight="normal" fill="#ffffff" text-anchor="middle" font-style="normal">users, games, genres, cart,</text>
+<text x="1190.0" y="330.5" font-size="12.5" font-weight="normal" fill="#ffffff" text-anchor="middle" font-style="normal">orders, Game List, refunds</text>
+<text x="460" y="410" font-size="13" font-weight="bold" fill="#08427b" text-anchor="middle" font-style="normal">Presentation Layer</text>
+<text x="840" y="410" font-size="13" font-weight="bold" fill="#08427b" text-anchor="middle" font-style="normal">Domain Layer + Data Access Layer</text>
+<text x="1190" y="410" font-size="13" font-weight="bold" fill="#08427b" text-anchor="middle" font-style="normal">Data Source</text>
+<polyline points="230,320 326,320" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="262" y="308" font-size="12.5" font-weight="normal" fill="#444444" text-anchor="middle" font-style="normal">ใช้งาน</text>
+<polyline points="590,285 701,285" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="646" y="270" font-size="12.5" font-weight="normal" fill="#444444" text-anchor="middle" font-style="normal">เรียก REST API</text>
+<text x="646" y="306" font-size="11.5" font-weight="normal" fill="#777" text-anchor="middle" font-style="normal">[JSON/HTTP]</text>
+<polyline points="975,285 1066,285" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="1020" y="270" font-size="12.5" font-weight="normal" fill="#444444" text-anchor="middle" font-style="normal">อ่าน/เขียน</text>
+<text x="1020" y="306" font-size="11.5" font-weight="normal" fill="#777" text-anchor="middle" font-style="normal">[EF Core,</text>
+<text x="1020" y="322" font-size="11.5" font-weight="normal" fill="#777" text-anchor="middle" font-style="normal">SQL/TCP]</text>
+<rect x="705" y="630" width="270" height="120" rx="10" fill="#999999" stroke="#555" stroke-dasharray="6 4" stroke-width="1.5"/>
+<text x="840.0" y="676.0" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle" font-style="normal">Bank System (ธนาคาร)</text>
+<text x="840.0" y="692.0" font-size="12" font-weight="normal" fill="#ffffff" text-anchor="middle" font-style="normal">[Software System - External]</text>
+<text x="840.0" y="720.0" font-size="12.5" font-weight="normal" fill="#ffffff" text-anchor="middle" font-style="normal">*จำลองโดย SimulatedBankGateway</text>
+<polyline points="840,380 840,626" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="850" y="480" font-size="12.5" font-weight="normal" fill="#444444" text-anchor="start" font-style="normal">ส่งคำขอตัดเงิน/คืนเงินไปยัง</text>
+<text x="850" y="496" font-size="11.5" font-weight="normal" fill="#777777" text-anchor="start" font-style="normal">[IBankGateway]</text>
+<text x="330" y="480" font-size="13" font-weight="bold" fill="#333" text-anchor="start" font-style="normal">ข้อดีของ 3-Tier (ชีต 10):</text>
+<text x="330" y="500" font-size="12.5" font-weight="normal" fill="#444" text-anchor="start" font-style="normal">• connection string อยู่ที่ Server เท่านั้น ไม่หลุดไปที่ Client</text>
+<text x="330" y="518" font-size="12.5" font-weight="normal" fill="#444" text-anchor="start" font-style="normal">• ตรวจรหัสผ่าน / กฎการคืนเงิน อยู่ใน Server: client ข้ามกฎไม่ได้</text>
+<text x="330" y="536" font-size="12.5" font-weight="normal" fill="#444" text-anchor="start" font-style="normal">• รองรับผู้ใช้หลายคนพร้อมกัน</text>
+<rect x="30" y="680" width="620" height="78" rx="6" fill="#fafafa" stroke="#cccccc"/>
+<text x="42" y="698" font-size="12" font-weight="bold" fill="#555555" text-anchor="start" font-style="normal">Legend (ความหมายของสัญลักษณ์)</text>
+<rect x="50" y="708" width="120" height="28" rx="13" fill="#08427b"/>
+<text x="110" y="752" font-size="11.5" font-weight="normal" fill="#444444" text-anchor="middle" font-style="normal">Person</text>
+<rect x="200" y="708" width="120" height="28" rx="4" fill="#438dd5"/>
+<text x="260" y="752" font-size="11.5" font-weight="normal" fill="#444444" text-anchor="middle" font-style="normal">Container</text>
+<rect x="380" y="710" width="60" height="26" fill="#438dd5"/><ellipse cx="410" cy="710" rx="30" ry="6" fill="#438dd5" stroke="#32699f"/><ellipse cx="410" cy="736" rx="30" ry="6" fill="#438dd5"/>
+<text x="410" y="752" font-size="11.5" font-weight="normal" fill="#444444" text-anchor="middle" font-style="normal">Database</text>
+<rect x="500" y="708" width="120" height="28" rx="4" fill="none" stroke="#8a8a8a" stroke-dasharray="8 5" stroke-width="1.5"/>
+<text x="560" y="752" font-size="11.5" font-weight="normal" fill="#444444" text-anchor="middle" font-style="normal">System Boundary</text>
+</svg>

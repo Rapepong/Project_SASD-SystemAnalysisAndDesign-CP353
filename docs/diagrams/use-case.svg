@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="860" viewBox="0 0 1040 860" font-family="Leelawadee UI, Segoe UI, Tahoma, sans-serif">
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#707070"/></marker>
+  <marker id="open" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10" fill="none" stroke="#707070" stroke-width="1.5"/></marker>
+  <marker id="hollow" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="13" markerHeight="13" orient="auto-start-reverse">
+    <path d="M0,0 L12,6 L0,12 z" fill="#ffffff" stroke="#707070" stroke-width="1.2"/></marker>
+</defs>
+<rect width="1040" height="860" fill="#ffffff"/>
+<text x="30" y="40" font-size="20" font-weight="bold" fill="#111111" text-anchor="start" font-style="normal">Use Case Diagram : Online Game Store (OGS)</text>
+<text x="30" y="62" font-size="13" font-weight="normal" fill="#666666" text-anchor="start" font-style="normal">Actors: Customer (ลูกค้า), Bank (ธนาคาร - จำลอง)</text>
+<rect x="250" y="80" width="540" height="760" fill="#f7fbff" stroke="#1168bd" stroke-width="2"/>
+<text x="520.0" y="106" font-size="16" font-weight="bold" fill="#1168bd" text-anchor="middle" font-style="normal">Online Game Store (OGS)</text>
+<ellipse cx="520.0" cy="162" rx="190" ry="34" fill="#fff8e1" stroke="#c99a00" stroke-width="1.8" stroke-dasharray="6 4"/>
+<text x="520.0" y="158" font-size="14" font-weight="bold" fill="#5d4500" text-anchor="middle" font-style="normal">ซื้อเกมออนไลน์ (Buy Games Online)</text>
+<text x="520.0" y="176" font-size="12" font-weight="normal" fill="#8a6d00" text-anchor="middle" font-style="normal">«kite level»</text>
+<ellipse cx="520.0" cy="240" rx="150" ry="24" fill="#ffffff" stroke="#1168bd" stroke-width="1.6"/>
+<text x="520.0" y="238" font-size="13.5" font-weight="bold" fill="#1b3a5c" text-anchor="middle" font-style="normal">สมัครสมาชิก</text>
+<text x="520.0" y="254" font-size="11.5" font-weight="normal" fill="#557" text-anchor="middle" font-style="normal">(Register)</text>
+<ellipse cx="520.0" cy="294" rx="150" ry="24" fill="#ffffff" stroke="#1168bd" stroke-width="1.6"/>
+<text x="520.0" y="292" font-size="13.5" font-weight="bold" fill="#1b3a5c" text-anchor="middle" font-style="normal">เข้าสู่ระบบ</text>
+<text x="520.0" y="308" font-size="11.5" font-weight="normal" fill="#557" text-anchor="middle" font-style="normal">(Login)</text>
+<ellipse cx="520.0" cy="348" rx="150" ry="24" fill="#ffffff" stroke="#1168bd" stroke-width="1.6"/>
+<text x="520.0" y="346" font-size="13.5" font-weight="bold" fill="#1b3a5c" text-anchor="middle" font-style="normal">ค้นหาเกม (ชื่อ / genre)</text>
+<text x="520.0" y="362" font-size="11.5" font-weight="normal" fill="#557" text-anchor="middle" font-style="normal">(Search Games)</text>
+<ellipse cx="520.0" cy="402" rx="150" ry="24" fill="#ffffff" stroke="#1168bd" stroke-width="1.6"/>
+<text x="520.0" y="400" font-size="13.5" font-weight="bold" fill="#1b3a5c" text-anchor="middle" font-style="normal">ดูรายละเอียดเกม</text>
+<text x="520.0" y="416" font-size="11.5" font-weight="normal" fill="#557" text-anchor="middle" font-style="normal">(View Game Detail)</text>
+<ellipse cx="520.0" cy="456" rx="150" ry="24" fill="#ffffff" stroke="#1168bd" stroke-width="1.6"/>
+<text x="520.0" y="454" font-size="13.5" font-weight="bold" fill="#1b3a5c" text-anchor="middle" font-style="normal">เพิ่มเกมลงตะกร้า</text>
+<text x="520.0" y="470" font-size="11.5" font-weight="normal" fill="#557" text-anchor="middle" font-style="normal">(Add to Cart)</text>
+<ellipse cx="520.0" cy="510" rx="150" ry="24" fill="#ffffff" stroke="#1168bd" stroke-width="1.6"/>
+<text x="520.0" y="508" font-size="13.5" font-weight="bold" fill="#1b3a5c" text-anchor="middle" font-style="normal">นำเกมออกจากตะกร้า</text>
+<text x="520.0" y="524" font-size="11.5" font-weight="normal" fill="#557" text-anchor="middle" font-style="normal">(Remove from Cart)</text>
+<ellipse cx="520.0" cy="564" rx="150" ry="24" fill="#ffffff" stroke="#1168bd" stroke-width="1.6"/>
+<text x="520.0" y="562" font-size="13.5" font-weight="bold" fill="#1b3a5c" text-anchor="middle" font-style="normal">ชำระเงิน</text>
+<text x="520.0" y="578" font-size="11.5" font-weight="normal" fill="#557" text-anchor="middle" font-style="normal">(Checkout)</text>
+<ellipse cx="520.0" cy="618" rx="150" ry="24" fill="#ffffff" stroke="#1168bd" stroke-width="1.6"/>
+<text x="520.0" y="616" font-size="13.5" font-weight="bold" fill="#1b3a5c" text-anchor="middle" font-style="normal">ดู Game List</text>
+<text x="520.0" y="632" font-size="11.5" font-weight="normal" fill="#557" text-anchor="middle" font-style="normal">(View Game List)</text>
+<ellipse cx="520.0" cy="672" rx="150" ry="24" fill="#ffffff" stroke="#1168bd" stroke-width="1.6"/>
+<text x="520.0" y="670" font-size="13.5" font-weight="bold" fill="#1b3a5c" text-anchor="middle" font-style="normal">เล่นเกม (จำลอง)</text>
+<text x="520.0" y="686" font-size="11.5" font-weight="normal" fill="#557" text-anchor="middle" font-style="normal">(Play Game)</text>
+<ellipse cx="520.0" cy="726" rx="150" ry="24" fill="#ffffff" stroke="#1168bd" stroke-width="1.6"/>
+<text x="520.0" y="724" font-size="13.5" font-weight="bold" fill="#1b3a5c" text-anchor="middle" font-style="normal">ขอคืนเงิน</text>
+<text x="520.0" y="740" font-size="11.5" font-weight="normal" fill="#557" text-anchor="middle" font-style="normal">(Request Refund)</text>
+<ellipse cx="520.0" cy="780" rx="150" ry="24" fill="#ffffff" stroke="#1168bd" stroke-width="1.6"/>
+<text x="520.0" y="778" font-size="13.5" font-weight="bold" fill="#1b3a5c" text-anchor="middle" font-style="normal">ดูประวัติการซื้อ / คืนเงิน</text>
+<text x="520.0" y="794" font-size="11.5" font-weight="normal" fill="#557" text-anchor="middle" font-style="normal">(View History)</text>
+<circle cx="110" cy="346" r="16" fill="#ffffff" stroke="#222" stroke-width="2"/>
+<line x1="110" y1="362" x2="110" y2="410" stroke="#222" stroke-width="2"/>
+<line x1="82" y1="378" x2="138" y2="378" stroke="#222" stroke-width="2"/>
+<line x1="110" y1="410" x2="88" y2="446" stroke="#222" stroke-width="2"/>
+<line x1="110" y1="410" x2="132" y2="446" stroke="#222" stroke-width="2"/>
+<text x="110" y="466" font-size="14" font-weight="bold" fill="#222222" text-anchor="middle" font-style="normal">Customer</text>
+<text x="110" y="484" font-size="14" font-weight="normal" fill="#222222" text-anchor="middle" font-style="normal">(ลูกค้า)</text>
+<line x1="140" y1="378" x2="370.0" y2="240" stroke="#555" stroke-width="1.2"/>
+<line x1="140" y1="378" x2="370.0" y2="294" stroke="#555" stroke-width="1.2"/>
+<line x1="140" y1="378" x2="370.0" y2="348" stroke="#555" stroke-width="1.2"/>
+<line x1="140" y1="378" x2="370.0" y2="402" stroke="#555" stroke-width="1.2"/>
+<line x1="140" y1="378" x2="370.0" y2="456" stroke="#555" stroke-width="1.2"/>
+<line x1="140" y1="378" x2="370.0" y2="510" stroke="#555" stroke-width="1.2"/>
+<line x1="140" y1="378" x2="370.0" y2="564" stroke="#555" stroke-width="1.2"/>
+<line x1="140" y1="378" x2="370.0" y2="618" stroke="#555" stroke-width="1.2"/>
+<line x1="140" y1="378" x2="370.0" y2="672" stroke="#555" stroke-width="1.2"/>
+<line x1="140" y1="378" x2="370.0" y2="726" stroke="#555" stroke-width="1.2"/>
+<line x1="140" y1="378" x2="370.0" y2="780" stroke="#555" stroke-width="1.2"/>
+<line x1="140" y1="378" x2="330.0" y2="162" stroke="#555" stroke-width="1.2"/>
+<circle cx="930" cy="406" r="16" fill="#ffffff" stroke="#222" stroke-width="2"/>
+<line x1="930" y1="422" x2="930" y2="470" stroke="#222" stroke-width="2"/>
+<line x1="902" y1="438" x2="958" y2="438" stroke="#222" stroke-width="2"/>
+<line x1="930" y1="470" x2="908" y2="506" stroke="#222" stroke-width="2"/>
+<line x1="930" y1="470" x2="952" y2="506" stroke="#222" stroke-width="2"/>
+<text x="930" y="526" font-size="14" font-weight="bold" fill="#222222" text-anchor="middle" font-style="normal">Bank</text>
+<text x="930" y="544" font-size="14" font-weight="normal" fill="#222222" text-anchor="middle" font-style="normal">(ธนาคาร)</text>
+<text x="930" y="562" font-size="14" font-weight="normal" fill="#222222" text-anchor="middle" font-style="normal">«simulated»</text>
+<line x1="670.0" y1="564" x2="900" y2="438" stroke="#555" stroke-width="1.2"/>
+<line x1="670.0" y1="726" x2="900" y2="438" stroke="#555" stroke-width="1.2"/>
+<text x="930" y="592" font-size="12" font-weight="normal" fill="#666" text-anchor="middle" font-style="normal">(ตัดเงิน / คืนเงิน)</text>
+</svg>

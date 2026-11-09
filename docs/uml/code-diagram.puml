@@ -1,0 +1,79 @@
+' C4 Level 4 : Code Diagram (UML Class Diagram)
+' ขยายความ component "การชำระเงินและคืนเงิน" (PurchaseService, RefundService, Bank Gateway)
+' เปิด/แก้ไขได้ที่ https://www.plantuml.com/plantuml
+@startuml
+skinparam classAttributeIconSize 0
+skinparam class {
+  BackgroundColor #FFFFFF
+  BorderColor #438DD5
+  HeaderBackgroundColor #85BBF0
+}
+
+package "Domain Layer (GameStore.Api/Domain)" {
+  class PurchaseService {
+    - db : GameStoreContext
+    - bank : IBankGateway
+    + CheckoutAsync(userId : int, request : CheckoutRequest) : Task<PurchaseReceiptDto>
+    + GetOrdersAsync(userId : int) : Task<List<OrderDto>>
+    + GetOrderAsync(userId : int, orderId : int) : Task<OrderDto>
+  }
+
+  class RefundService {
+    - db : GameStoreContext
+    - bank : IBankGateway
+    + RequestRefundAsync(userId : int, request : RefundRequest) : Task<RefundReceiptDto>
+    + GetRefundsAsync(userId : int) : Task<List<RefundDto>>
+    + GetRefundAsync(userId : int, refundId : int) : Task<RefundDto>
+  }
+
+  class RefundPolicy <<static>> {
+    + MaxDaysAfterPurchase : int = 14
+    + MaxPlaytimeMinutes : int = 120
+    + Check(orderedAt : DateTime, playtimeMinutes : int, isRefunded : bool, now : DateTime) : RefundEligibility
+  }
+
+  class RefundEligibility <<record>> {
+    + IsEligible : bool
+    + Note : string
+  }
+}
+
+package "Data Access Layer (GameStore.DataAccess)" {
+  interface IBankGateway {
+    + ChargeAsync(accountNo : string, amount : decimal, description : string) : Task<BankTransactionResult>
+    + RefundAsync(accountNo : string, amount : decimal, description : string) : Task<BankTransactionResult>
+  }
+
+  class SimulatedBankGateway {
+    - db : GameStoreContext
+    + ChargeAsync(...) : Task<BankTransactionResult>
+    + RefundAsync(...) : Task<BankTransactionResult>
+  }
+
+  class BankTransactionResult <<record>> {
+    + Success : bool
+    + Reference : string?
+    + BalanceAfter : decimal?
+    + FailureReason : string?
+  }
+
+  class GameStoreContext {
+    + Orders : DbSet<Order>
+    + OrderItems : DbSet<OrderItem>
+    + LibraryItems : DbSet<LibraryItem>
+    + Refunds : DbSet<Refund>
+    + CartItems : DbSet<CartItem>
+    + BankAccounts : DbSet<BankAccount>
+  }
+}
+
+PurchaseService --> IBankGateway : ขอตัดเงินผ่าน
+RefundService --> IBankGateway : ขอคืนเงินผ่าน
+PurchaseService --> GameStoreContext : บันทึก order ผ่าน
+RefundService --> GameStoreContext : บันทึก refund ผ่าน
+RefundService ..> RefundPolicy : ตรวจเงื่อนไขด้วย
+RefundPolicy ..> RefundEligibility : <<returns>>
+SimulatedBankGateway ..|> IBankGateway
+SimulatedBankGateway --> GameStoreContext : UPDATE bank_accounts ผ่าน
+IBankGateway ..> BankTransactionResult : <<returns>>
+@enduml
